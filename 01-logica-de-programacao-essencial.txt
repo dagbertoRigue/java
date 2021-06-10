@@ -1,0 +1,23 @@
+Introdução à lógica de programação
+Entendendo o que é lógica : "coerência de raciocínio, de ideias"; "sequência coerente, regular e necessária de acontecimentos, coisas".
+
+Lógica de programação significa apenas contextualizar a lógica na programação de computadores, buscando a melhor sequência de ações para solucionar um problema.
+
+Sequência de ações = algoritmo.
+
+Metacognição = pensar como você pensa.
+
+Abstração é a habilidade de concentrar nos aspectos essenciais de um contexto qualquer, ignorando características menos importantes ou acidentais.
+
+Algoritmo é uma sequência de ações para se resolver um problema.
+
+Pseudocódigo é uma forma genérica de escrever um algoritmo, utilizando uma linguagem simples, entendível à qualquer pessoa.
+
+Fluxograma é uma ferramenta utilizada para representar graficamente o algoritmo, isto é, a sequência lógica e coerente do fluxo de dados. É um tipo de diagrama e pode ser entendido como uma representação esquemática de um processo. Podemos entendê-lo, na prática, como a documentação dos passos necessários para a execução de um processo qualquer.
+
+Variável é um objeto (uma posição, frequentemente localizada na memória) capaz de reter e representar um valor ou expressão. É um espaço na memória do computador destinado a um dado que é alterado durante a execução do algoritmo.
+
+Constantes são valores imutáveis e não são alterador durante a vida útil do programa.
+
+Programa gratuíto para gerar fluxogramas :
+http://flowgorithm.org/

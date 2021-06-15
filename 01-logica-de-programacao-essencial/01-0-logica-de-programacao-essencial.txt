@@ -45,7 +45,7 @@ Tomadas de decisão : quando escrevemos programas, geralmente, ocorre a necessid
 
 Concatenação é um termo usado, em computação, para designar a operação de unir dois ou mais conteúdos. Agrupamento de duas ou mais células que, incluindo fórmulas, textos ou outras informações contidas no seu interior, dá origem a um único resultado. 
 
-
+Estrutura de repetição é uma estrutura que permite executar mais de uma vez o mesmo comando, ou conjunto de comandos, de acordo com uma condição ou com um contador.
 
 
 

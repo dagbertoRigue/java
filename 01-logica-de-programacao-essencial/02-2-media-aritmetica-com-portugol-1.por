@@ -1,3 +1,6 @@
+// Função do algoritmo : Calcular a média aritmética
+// Autor: Dagberto Rigue
+
 programa
 {
 	
@@ -20,7 +23,7 @@ programa
 		media = (nota1+nota2+nota3+nota4)/4
 
 		escreva("O aluno " + aluno + " obteve a média: " + media)
-
+		// Verifica se a média é maior ou igual a 7
 		se(media >=7) {
 			escreva("\n" + "Parabéns! Você foi aprovado.")
 		}
@@ -34,7 +37,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 504; 
+ * @POSICAO-CURSOR = 152; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

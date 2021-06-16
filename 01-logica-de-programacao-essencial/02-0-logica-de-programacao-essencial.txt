@@ -9,9 +9,43 @@ Baixo nível - são aquelas que se aproximam mais da linguagem de máquina. Essa
 Linguagem compilada é uma linguagem de programação em que o código fonte é executado diretamente pelo sistema operacional ou pelo processador, após ser traduzido por meio de um processo chamado compilação.
 Exemplo : C#, Delphi
 Linguagem interpretada é uma linguagem de programação em o código fonte é executado por um programa de computador chamado interpretador que, em seguida, é executado pelo sistema operacional ou processador.
-Exemplo: PHP, Javascript
+Exemplo: PHP, Javascript, Python
 
 Portugol é uma pseudolinguagem que permite ao leitor desenvolver algoritmos estruturados em português de forma simples e intuitiva, independentemente de linguagem de programação.
 
 Pseudolinguagem permite ao programador pensar no problema em si e não no equipamento que irá executar o algoritmo.
+
+Palavra reservada é uma palavra que não pode ser utilizada, pois a linguagem a utiliza como função.
+
+Condidional if (se)
+Utilizada para validar uma condição testada, que está entre parênteses e caso seja verdadeira, executar as funções que estão entre chaves.
+
+Condicional else (senão)
+Utilizada em conjunto com a condição if se a condição testada for falsa. Nesse caso, um outro conjunto de comandos será executado
+
+Desvio condicional - case (caso)
+Similar aos comandos "if" e "else", e reduz a complexidade na escolha de diversas opções. Apesar de suas similaridades com o if, ele possui algumas diferenças. Neste comando, não é possível o uso de operadores lógicos, ele apenas trabalha com valores definidos.
+
+Matriz é uma coleção de variáveis de mesmo tipo, acessíveis com um único nome e armazenados contiguamente na memória.
+A individualização de cada variável de um vetor é feita através do uso de índices.
+
+Vetores são matrizes de uma só dimensão.
+
+Exemplos: cadeia Vetor[5]      //declara um vetor de 5 posições
+	  cadeia Matriz[5][3]  //declar uma matriz de 5 linhas e 3 colunas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+...
 

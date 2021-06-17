@@ -1,0 +1,12 @@
+Pilha (Stack) é uma estrutura de dados que serve como uma coleção de elementos e permite o acesso a somente um item de dados armazenado, por vez. 
+O acesso aos itens de uma pilha é restrito, ou seja, somente um item pode ser lido ou removido por vez.
+
+Tipos de pilhas :
+LIFO ou UEPS ('Last In First Out' ou 'Último que Entra Primeiro que Sai')
+FIFO ou PEPS ('Firt In First Out' ou 'Primeiro que Entra Primeiro que Sai')
+
+LIFO apresenta o seguinte critério : o último elemento a ser retirado é o último que tiver sido inserido.
+FIFO apresenta o seguinte critério : o primeiro elemento a ser retirado é o primeiro que tiver sido inserido.
+
+Filas é uma estrutura de dados que admite remoção de elementos e inserção de novos sujeita à seguinte regra de operação:
+O elemento removido é o que está na estrutura há mais tempo, ou seja, o primeiro objeto inserido na fila é também o primeiro a ser removido seguindo o conceito FIFO

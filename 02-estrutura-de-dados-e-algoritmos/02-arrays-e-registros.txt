@@ -1,0 +1,13 @@
+Vetores e matrizes, também chamados de arrays, são estruturas de dados simples que podem auxiliar quando há muitas variáveis do mesmo tipo em um algoritmo.
+
+Vetor ou array unidimensional é uma variável que armazena várias variáveis do mesmo tipo.
+Vetor é uma estrutura de dados indexada, que pode armazenar uma determinada quantidade de valores do mesmo tipo.
+
+Matriz ou array multidimensionaç é um vetor de vetores. Uma matriz é um vetor que possui duas ou mais dimensões.
+
+Registro é uma estrutura que fornece um formato especializado para armazenar informações em memória.
+
+Enquanto arrays nos permitem armazenar vários dados de um único tipo de dados, o recurso de Registro nos permite armazenar mais de um tipo de dado.
+
+Toda estrutura de registro tem um nome e seus campos podem ser acessados por meio do uso do operador 'ponto' (.). Por exemplo, para acessar o preço de um livro, poderíamos utilizar a seguinte declaração :
+livro.preco

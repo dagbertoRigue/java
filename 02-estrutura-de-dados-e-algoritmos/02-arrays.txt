@@ -1,8 +1,0 @@
-Vetores e matrizes, também chamados de arrays, são estruturas de dados simples que podem auxiliar quando há muitas variáveis do mesmo tipo em um algoritmo.
-
-Vetor ou array unidimensional é uma variável que armazena várias variáveis do mesmo tipo.
-Vetor é uma estrutura de dados indexada, que pode armazenar uma determinada quantidade de valores do mesmo tipo.
-
-Atuar no desenvolvimento de sistemas em Java, banco de dados relacionais ou não-relacionais e ferramentas de análise de dados.
-
-Desenvolver um sistema web especialista para gestão de ativos, avaliado em, aproximadamente, 1 milhão de reais, que atualmente integra a automação da maior siderúrgica brasileira.

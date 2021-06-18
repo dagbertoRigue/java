@@ -1,0 +1,12 @@
+Árvore é uma estrutura de dados que organiza seus elementos de forma hierárquica, onde existe um elemento que fica no topo da árvore, chamado de raiz e existem os elementos subordinados a ele, que são chamados de nós ou folhas.
+
+Tabela Hash é também conhecida como tabela de espalhamento. Uma tabela hash, de dispersão ou espalhamento é uma estrutura de dados especial, que associa chaves de pesquisa a valores.
+Uma tabela hash é uma generalização da idéia de array, porém utiliza uma função denominada Hashing, para espalhar os elementos, fazendo com que os mesmos fiquem de forma não ordenada dentro do 'array' que define a tabela.
+Porque espalhar ?
+A tabela hash permite a associação de 'valores' a 'chaves'.
+Valores : é a posição ou índice onde o elemento se encontra.
+Chave : parte da informação que compões o elemento a ser manipulado.
+
+Grafo são estruturas que permitem programar a relação entre objetos.
+Os objetos são vértices ou 'nós' do grafo.
+Os relacionamentos são as arestas.

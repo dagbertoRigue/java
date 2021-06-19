@@ -1,0 +1,63 @@
+Ciclo de vida dos arquivos no Git
+
+Obs.: o termo diretório é usado quando tratamos das pastas no desktop. Assim que inicia-se o versionamento no Git, a terminologia correta muda para repositório.
+
+Tracked ou Untracked
+Untracked é tudo que ainda não foi adicionado ao Git.
+Tracked é tudo que está rastreado pelo Git.
+
+Tracked se divide em : Unmodified, Modified e Staged.
+Unmodified : arquivo que ainda não foi modificado.
+Modified : arquivo que já recebeu alguma modificação
+Staged : arquivo está aguardando para ser adicionado
+
+Adiciona arquivo : arquivo sai do estado de Untracked para Staged
+Edita arquivo : arquivo sai do estado de Unmodified para Modified
+"Stage" arquivo : arquivo sai estado de Modified para Staged
+Commit : arquivo sai do estado de Staged para Unmodified (atenção que ele não vai para o estado de Modified)
+Remove arquivo : sai do estado de Unmodified para Untracked
+
+O versionamento fica dividido em dois ambientes : Servidor e Ambiente de desenvolvimento (diretório criado)
+Servidor : Remote Repository
+Ambiente de desenvolvimento : Working Directory - Staging Area - Local Repository
+
+Transição do arquivo
+Working Directory para Staging Area - Adicionar arquivo ou "stage" arquivo.
+Staging Area para Local Repository - Commit
+Para verificar o status dos aquivos : git status
+
+O Git é um sistema distribuído e para mover o conteúdo, do ambiente de desenvolvimento, para o servidor é necessário um conjunto de comandos específicos, empurrando para o servidor.
+
+Melhorando e avançando com o projeto Receitas
+1. Adicionar uma diretório "receitas" : mkdir receitas
+2. Mover o arquivo strogonoff.md para dentro do diretório criado : mv strogonoff.md ./receitas/
+3. Verificar o status do arquivo dentro da pasta receitas : git status
+E a resposta foi : 
+-----------------------------------------------------------------------
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../strogonoff.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

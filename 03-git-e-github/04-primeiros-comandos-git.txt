@@ -15,3 +15,32 @@ Criando um repositório :
 A resposta foi : Initialized empty Git repository in C:/workspace/livro-receitas/.git/
 Apesar da resposta dizer que foi inicializado um repositorio vazio, ela mostra uma pasta chamada .git e mesmo que se tente mostrar essa pasta listando com o comando dir, ela não vai aparecer, porque ela é oculta.
 Para listar pastas ocultas, é preciso adicionar a flag -a : dir -a
+5. Realizar as configurações iniciais
+E-mail : git config --global user.email "riguealive@gmail.com"
+Autor : git config --global user.name dagbertoRigue
+6. Adicionando um arquivo
+Adicionar um arquivo Markdown (.md). Um arquivo markdown é um formato mais humano de um arquivo .html.
+Crie o arquivo pelo Windows Explorer com a extensão .md.
+7. Fazer o commit do arquivo : 
+git add * [enter]
+git commit -m "Commit inicial" [Entre aspas, vai o comentário do commit]
+A resposta foi :
+[master (root-commit) 83a6587] Commit inicial
+ 1 file changed, 28 insertions(+)
+ create mode 100644 strogonoff.md
+Obs.: esse código 83a6587 é o começo do sha1.
+
+Observações finais:
+md: um arquivo que usa caracteres especiais como # para formatar o texto
+git commit - estrutura do git responsável por adicionar uma mensagem as nossas alterações.
+
+
+
+
+
+
+
+
+
+
+

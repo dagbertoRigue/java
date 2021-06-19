@@ -1,0 +1,16 @@
+Github
+
+1. Criar uma conta no Github : https://github.com/
+Lembrando que o e-mail utilizado na congiguração do Git deve coincidir com o e-mail usado no cadastro do Github.
+
+2. Crie um repositório : Create a new repository
+Adicione nome e descrição, torne-o público ou privado e clique >>> Create Repository
+Ao criar um repositório sem um arquivo readme.md, o Github redireciona para a página de setup, onde é possível copiar os comandos principais.
+
+3. Apontar o repositório local para o repositório no Github (push an existing repositpry from the command line) : git remote add origin https://github.com/dagbertoRigue/livro-receitas.git
+
+4. Para listar os repositórios cadastrados no repositório remoto : git remote -v
+
+5. Para 'empurrar' o repositório local para o repositório remoto : git push origin master
+
+Obs.: O Github pode pedir confirmação para concluir

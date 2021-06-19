@@ -1,0 +1,58 @@
+SHA1
+ É um algoritmo de encriptação. A sigla SHA significa Secure Hash Algorithm (Algoritmo de Hash Seguro). É um conjunto de funções hash criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA).
+ A encriptação gera um conjunto de caracteres indentificador de 40 digítos.
+Em outras palaveas, SHA1 é usado para identificar arquivos.
+
+Testando a encriptação:
+1. Salve o arquivo 03-teste.txt e abra o GIT Hash (botão direito dentro do diretório, 'Git Bash Here') no diretório que esse foi salvo.
+2. Execute o comando : openssl sha1 03-teste.txt
+	A resposta foi : SHA1(03-teste.txt)= 7f1e0a7baf323f3df9cf022d1fc90eecad7f2ac1
+3. Abra o arquivo (no Notepad) e altere qualquer coisa e salve (deverá desfazer a alteração posteriormente para testar).
+4. execute o mesmo comando : openssl sha1 03-teste.txt
+	A resposta foi : SHA1(03-teste.txt)= 1af637cc0292b80c9f5af8bd58ac02e5596be31b
+	Uma chave de 40 caracteres diferente.
+5. Abra o arquivo novamente, desfaça a alteração, salve e execute mais uma vez o comando : openssl sha1 03-teste.txt
+	A resposta foi : SHA1(03-teste.txt)= 7f1e0a7baf323f3df9cf022d1fc90eecad7f2ac1
+	Novamente a mesma chave do arquivo original e igualmente ao executado agora.
+
+
+OBJETOS FUNDAMENTAIS - Blob, Tree, Commit, Annotaded Tag
+Existem 4 tipos de objetos que são armazenados no git: commit objects, annotaded tag objects, blobs and tree objects.
+
+Blob
+Exemplo com uma string, usando git:
+	echo 'conteudo' | git hash-object --stdin
+Cada arquivo no Git é armazenado como um objeto blob, que contém metadados para gerar o código hash:
+Exemplo sem usar o Git, usando o openssl. (o hash gerado será outro, pois não estará sendo enviado os metadados).
+Para um mesmo hash, deve-se passar os metadados
+	echo -e 'blob 9\0conteudo' | openssl sha1
+onde: blob, 9 (tamanho da string), \0 são os metadados enviados pelo git.
+
+Tree	
+Vários blobs, ou seja cada conjunto de arquivos vinvulados no mesmo diretório compõem uma Tree.
+
+Commit
+O commit é o que junta todas as informações anteriores, dando sentido para as alterações feitas, incluindo o commit anterior que foi realizado e os dados abaixo:
+ Commit        <tamanho>
+  tree           s4a5sq1
+  parente        a98acq1
+  autor            rigue
+  mensagem   "inicia..."
+  timestamp
+
+O SHA1 desse commit é o hash de toda essa informação.
+Se for alterado uma blob, será gerado um novo sha1. Consequentemente, a Tree desse blob também terá seu sha1 alterado, assim como o sha1 do commit.
+
+SISTEMA DISTRIBUÍDO
+O GIT fornece para todos os desenvolvedores seu próprio repositório local, com todo o histórico de commits. O que traz uma série de vantagens e otimiza o seu desenvolvimento. É um sistema que possui múltiplas cópias de si mesmo em diferents locais.
+
+Segurança
+Pelo fato da impossibilidade de alteração do commit, torna o sistema confiável, devido a estrutura como o GIT foi criada. É seguro porque seus objetos estão ligados de maneira encadeada e de difícil alteração.
+
+
+
+
+
+
+
+

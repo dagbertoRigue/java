@@ -1,0 +1,12 @@
+Instalação do GIT:
+
+https://git-scm.com/downloads
+
+Baixar o executável e executar a instalação padrão.
+
+Atentar-se para o detalhe que deve estar flaged:
+Windows Explorer integration
+ v Git Bash Here
+ v Git GUI Here
+
+Isso vai permitir uma facilidade, na hora de abrir o GIT Bash: para utilizar o GIT, será possível abrir o diretório pelo Windows Explorer e com o botão direito abrir o Git Bash. Dessa forma, não será preciso navegar até o diretório desejado, pois o Git Bash abrirá com o diretório selecionado.

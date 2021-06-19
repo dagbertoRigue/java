@@ -30,7 +30,9 @@ O Git é um sistema distribuído e para mover o conteúdo, do ambiente de desenv
 
 Melhorando e avançando com o projeto Receitas
 1. Adicionar uma diretório "receitas" : mkdir receitas
+
 2. Mover o arquivo strogonoff.md para dentro do diretório criado : mv strogonoff.md ./receitas/
+
 3. Verificar o status do arquivo dentro da pasta livro-receitas: git status
 E a resposta foi : 
 -----------------------------------------------------------------------
@@ -48,7 +50,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 -----------------------------------------------------------------------
 Ele está dizendo que o arquivo strogonoff foi deletado e está na área de staged, aguardando o commit, porque não está nessa foto, nesse snapshat.
 Ele recomenda dar um 'git add' para adicionar essas alterações para o commit e 'git commit -a' para comitar essas alterações.
+
 4. Adicionar as alterações (arquivo strogonoff e diretório receitas) para o commit : git add strogonoff.md receitas/
+
 5. Comitar as alterações, adicionando a observação : git commit -m "Cria pasta receitas, move arquivo para receitas"
 A resposta foi :
 -----------------------------------------------------------------------
@@ -64,7 +68,9 @@ nothing to commit, working tree clean
 -----------------------------------------------
 
 7. Adicionar mais um arquivo para usar como indexador das receitas : echo > README.md
+
 8. Listar o repositório para conferir : dir
+
 9. Verificar o status :  git status
 -----------------------------------------------------------------------------
 On branch master
@@ -74,13 +80,20 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ------------------------------------------------------------------------------
-
 Veja que ele mostra o arquivo READ.md como Untracked
+
 10. Altere o arquivo, adicionando um texto qualquer.
+
 11. Envie o arquivo para a área do Staged (deve ser adicionado um asterisco para adicionar toda a alteração em todos os arquivos e diretórios) : git add *
+
 12. Comitar as últimas alterações : git commit -m "Adiciona index"
 
 
+Considerações finais : 
+ - Para listar as configurações iniciais do Git para conferir e poder alterar, como nome e e-mail, para alterar uma conta, utilize o comando : git config --list
+ - Para remover uma configuração e posterior alteração (por exemplo, e-mail) : git config --global --unset user.email 
+ - Liste novamente as configurações para verificar que essa configuração teste (e-mail), não aparecerá mais na lista.
+ - Para configurar novamente : git config --global user.email "emailDesejado"
 
 
 

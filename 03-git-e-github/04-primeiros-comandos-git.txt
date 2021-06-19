@@ -9,18 +9,24 @@ Obs2.: todos os comandos utilizados no cmd, no 01-introducao-git-e-github são u
 
 Criando um repositório :
 1. Abra o Git Bash na pasta de trabalho a utilizar (workspace).
+
 2. Crie o diretório do projeto (exemplo livro de receitas) : mkdir livro-receitas
+
 3. Acesse a pasta criada : cd livro-receitas/
+
 4. Iniciar o git dentro da pasta, para que o git comece de fato a gerenciar o versionamento desse projeto : git init
 A resposta foi : Initialized empty Git repository in C:/workspace/livro-receitas/.git/
 Apesar da resposta dizer que foi inicializado um repositorio vazio, ela mostra uma pasta chamada .git e mesmo que se tente mostrar essa pasta listando com o comando dir, ela não vai aparecer, porque ela é oculta.
 Para listar pastas ocultas, é preciso adicionar a flag -a : dir -a
+
 5. Realizar as configurações iniciais
 E-mail : git config --global user.email "riguealive@gmail.com"
 Autor : git config --global user.name dagbertoRigue
+
 6. Adicionando um arquivo
 Adicionar um arquivo Markdown (.md). Um arquivo markdown é um formato mais humano de um arquivo .html.
 Crie o arquivo pelo Windows Explorer com a extensão .md.
+
 7. Fazer o commit do arquivo : 
 git add * [enter]
 git commit -m "Commit inicial" [Entre aspas, vai o comentário do commit]

@@ -1,0 +1,11 @@
+SHA1
+ É um algoritmo de encriptação. A sigla SHA significa Secure Hash Algorithm (Algoritmo de Hash Seguro). É um conjunto de funções hash criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA).
+ A encriptação gera um conjunto de caracteres indentificador de 40 digítos.
+
+
+
+Objetos fundamentais
+
+Sistema distribuído
+
+Segurança

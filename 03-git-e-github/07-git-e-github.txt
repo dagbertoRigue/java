@@ -14,3 +14,15 @@ Ao criar um repositório sem um arquivo readme.md, o Github redireciona para a p
 5. Para 'empurrar' o repositório local para o repositório remoto : git push origin master
 
 Obs.: O Github pode pedir confirmação para concluir
+
+6. Para 'puxar' o repositório no servidor para o repositório local : git pull origin master
+Essa operação pode ser preciso, caso dois devs estejam trabalhando no mesmo arquivo e na mesma linha.
+Será exibido uma alert ![rejected], o que indica que o outro dev atualizou o repositório remoto e que seu commit está desatualizado.
+
+Essa operação de puxar pode retornar o erro de Merge.
+Pra resolver isso, abra o arquivo no Github, copie e altere o arquivo, integrando as alterações.
+
+Após, execute o 'git add *' para mudar o status para staged e 'git commit -m "comentários" ' para comitar as alterações. Em seguida, empurrar para o Github 'git push origin master'.
+
+Outras funções
+Para clonar um repositório no github : git clone https://github.com/oquequerclonar

@@ -1,0 +1,10 @@
+Problema: se através do GIT Bash o comando "push origin master" não estiver funcionando (travado), utilize o CMD do Windows.
+
+Solução:
+- Acesse o CMD e através da linha de comando navegue até a pasta onde está o seu repositório (mesma pasta onde vc está usando o GIT BASH). 
+- Dê o comando "git status" para ver se está funcionando. Caso positivo, dê o comando "git push origin master".
+- Será solicitado a autenticação do Github e para isso, será aberto o navegador.
+Realize a autenticaçao e pronto.
+
+Após este procedimento o GIT BASH passará a aceitar o comando push/pull.
+

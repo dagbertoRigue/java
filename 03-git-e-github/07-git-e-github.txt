@@ -26,3 +26,15 @@ Após, execute o 'git add *' para mudar o status para staged e 'git commit -m "c
 
 Outras funções
 Para clonar um repositório no github : git clone https://github.com/oquequerclonar
+
+Outras observações
+ - Quando você gera commits no seu repositório local com email e name diferentes dos utilizados no Github, os commits aparecem com e-mail e name diferentes no Github.
+ - Quando você tenta fazer um push do código para o Github e o seu commit não representa o estado mais atual do repositório, o git irá pedir para fazer um pull e depois um push.
+ - Após corrigir o conflito em seu repositório é necessário criar um novo commit e enviá-lo (git push) para o Github.
+
+
+
+
+
+
+...

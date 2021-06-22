@@ -58,28 +58,101 @@ CONFIGURAÇÕES DE MEMÓRIA
 
 -----------------------------------------------------------------------------------
 Arquivo pg_hba.conf
+Arquivo responsável pelo controle de autenticação dos usuários no servidor Postgresql. Libera determinado usuário acessar de determinado usuário. Ex. um usuário de vendas pode ter acesso liberado apenas a partir de um IP específico e acessar área específica do banco.
 
+Métodos de autenticação
+TRUST - conexão sem requisição de senha
+REJECT - rejeitar conexões
+MD5 - criptografia
+PASSWORD - senha sem criptografia
+GSS - Generic Security Service Application Program Interface
+SSPI - Security Support Provider Interface - somente para Windows
+KRB5 - Kerberos V5
+IDENT - utiliza o usuário do sistema operacional do cliente via Ident Server
+PEER - utiliza o usuário do sustema operacional do cliente
+LDAP - LDAP Server
+RADIUS - Radius Server
+CERT - autentificação via certificado ssl do cliente
+PAM - Pluggable Authentication Modules. O usuário precisa estar no banco.
 
+Exemplo : 
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
 
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+# Allow replication connections from localhost, by a user with the
+# replication privilege.
+host    replication     all             127.0.0.1/32            md5
+host    replication     all             ::1/128                 md5
 
+#NÃO FAZER ISSO EM PRODUÇÃO. PARA TESTES, OK:
+host    all             all             0.0.0.0/0            md5    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-----------------------------------------------------------------------------------
 Arquivo pg_ident.conf
+Arquivo responsável por mapear os usuários do sistema operacional com os usuários do banco de dados.
+Localizado no diretório de dados PGDATA de sua instalação. 
+A opção ident deve ser utilizada no arquivo pg_hba.cong.
 
+-----------------------------------------------------------------------------------
 Comandos administrativos
+
+Ubuntu
+ - pg_lsclusters : lista todos os clusters PostgreSQL
+ - pg_createclusters<version><cluster name> : cria um novo cluster PostgreSQL
+ - pg_dropcluster<version><cluster> : apaga um cluster PostgreSLQ
+ - pg_ctlcluster<version><cluster><action> : start, stop, status, restart de clusters PostgreSQL
+
+CentOS
+ - systemctl<action><cluster>
+   - systemctl start postgresql-11
+     Inicia o cluster PostreSQL
+   - systemctl status postgresql-11
+     Mostra o status do cluster PostreSQL
+   - systemctl stop postgresql-11
+     Para o cluster PostreSQL
+   - systemctl restart postgresql-11
+     Restarta o cluster PostreSQL
+
+Windows
+Acessar Windows>>>Serviços
+ - Com o botão direito do mouse, mostra todas as opções.
+
+Binários do PostgreSQL - Caso tenha compilado o PostgreSQL para utilizar
+- createdb, creatuser, dropdb, dropuser, initdb, pg_ctl, pg_basebackup, pg_dump/pg_dumpall (pseudo backup - não é considerado backup, porque não é possível restaurar o db), pg_restore, psql (binário para acessar o banco através do sistema opeacional), reindexdb, vacuumdb (reorganizar os index, por exemplo)
+
+-----------------------------------------------------------------------------------
+Arquiterura/Hierarquia
+
+Cluster
+Cluster é uma coleção de banco de dados que compartilham as mesmas configurações (arquivos de configurações) do PostgreSQL e do sistema operacional (porta, listen_addresses, etc). Dentro de um cluster, posso ter um ou mais banco de dados.
+
+Banco de dados (database)
+Conjunto de schemas com seus objetos e relações (tabelas, funções, views, etc.)
+
+Schema
+Conjunto de objetos/relações (tabelas, funções, views, etc.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

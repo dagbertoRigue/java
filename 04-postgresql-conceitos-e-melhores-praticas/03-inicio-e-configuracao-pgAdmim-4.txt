@@ -1,0 +1,55 @@
+DETALHES PARA CONEXÃO :
+1. Liberar acesso ao cluster em postgresql.conf
+2. Liberar acesso ao cluster para o usuário do banco de dados em pg_hba.conf
+3. Criar/editar usuários
+
+Obs.: a localização e o conteúdo dos arquivos de configuração são iguais para qualquer sistema operacional que tenha sido instalado, com exceção do Ubunto, caso tenha sido instalado pelo repositório oficial.
+
+1. Editar o arquivo postgresql.conf em 'Connections and authentication', 'listen_address', dessa forma : listen_addresses = '*'
+
+Salve o arquivo.
+
+Obs1.: o asterisco libera o acesso a qualquer IP, o que não é recomendado para projetos em produção, apenas em área de desenvovimento e teste.
+Obs2.: para editar senha do usuário, abra o postgres psql e comando : ALTER USER nomeDoUsuário PASSWORD '123'; Ainda assim, ele não vai passar a exigir a senha. É preciso alterar o arquivo pg_hba.conf, alterando o método de conexão para md5, dessa forma :
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+# Allow replication connections from localhost, by a user with the
+# replication privilege.
+host    replication     all             127.0.0.1/32            md5
+host    replication     all             ::1/128                 md5
+
+Obs3.: após alterar o arquivo pg_hba.conf, não é preciso reiniciar o banco de dados, bastando apenas fazer um reload de conexão : pg_ctlcluster 11 <nome do cluster> reload.
+
+
+PG ADMIN 4 
+
+1. Criar um grupo de servidores :
+- Selecione, no lado esquerdo 'Servers'. No menu suspenso, clique em Object >> Create >> Server Group. Adicione um nome para o Server Group, por exemplo: AULA.
+2. Criar um servidor :
+- Selecione o server group recém criado. No menu suspenso, clique em Object >> Create >> Server. 
+Na aba 'General', adicione um nome para o server e, se possível, um comentário, o que facilita, quando se trabalha com muitos bancos de dados, na hora de localizar, um determinado banco.
+Na aba 'Connection', adicione o Host name (para o exemplo localhost - 127.0.0.1) o Maintenance database, já que não existe banco criado (postgres), usuário e senha. Role e Service não são obrigatórios. Salve.
+- Verifique a árvore do server criado. Para criar um banco de dados, pode-se clicar com o botão direito do mouse, sobre 'Databases' >> Create >> Databases. Mas sigamos o exemplo via query.
+
+3. Criando um banco com queries :
+- Na árvore, selecione 'Database' ou 'postgres'. Clique no menu suspenso Tools >> Query tool. Abrirá uma nova aba para inserir queries.
+
+Obs.: a interface gráfica pg Admin funciona como as interfaces de outros bancos. Insira a query, selecione-a caso haja mais de uma digitada e clique em executar.
+- execute : CREATE DATABASE auladb;
+- refresh a árvore, em 'Databases' e já é possível ver o banco auladb criado.
+
+Obs.: a aba que está sendo executada a query está nomeada de 'postgres/postgres@AULA'. Feche-a e com o 'auladb' selecionado na árvore, clique em Tools >> Query tool. Observe que o nome na aba agora é 'auladb/postgres@AULA'
+
+
+
+
+
+
+
+
+

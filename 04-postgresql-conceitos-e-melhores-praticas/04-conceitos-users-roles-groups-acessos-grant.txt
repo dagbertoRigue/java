@@ -1,0 +1,64 @@
+1. Conceitos users/roles/groups
+
+Definição :
+Roles (papéis ou funções), users (usuários) e grupo de usuários são 'contas', perfis de atuação em um banco de dados que possuem permissões em comum ou específicas.
+Nas versões anteriores do PostgreSQL 8.1, usuários e roles tinham comportamentos diferentes. Atualmente, roles e users são alias.
+É possível que roles pertençam a outras roles ou users pertençam a outros users.
+Ex: 
+Role admin - com acesso all, permissão de criar outros usuários, por exemplo. 
+Role professores - com acesso para escrever em 10 tabelas exclusivas para professores. 
+Role alunos, que tem permissão apenas de leitura nas tabelas.
+Role PedroKantek pertence à role professores.
+
+
+2. Administrando users/roles/groups
+
+CREATE ROLE name [[WITH] OPTION[...]]
+
+onde as opções podem ser :
+SUPERUSER | NOSUPERUSER
+CREATEDB | NOCREATEDB
+CREATEROLE | NOCREATEROLE
+INHERIT | NOINHERIT - (OBS. se configurado como noinherit, mesmo que a role pertença à role admin, ela não herdará os privilégios de admin)
+LOGIN | NOLOGIN (Obs. permite logar ou não no banco de dados)
+REPLICATION | NOREPLICATION  (OBS, serve para permissão a backup)
+BYPASSRLS | NOBYPASSRLS
+CONNECTION LIMIT connlimit
+[ENCRYPTED] PASSWORD 'password' | PASSWORD NULL
+VALID UNTIL 'timestamp' (OBS. permite acesso por um período de tempo)
+IN ROLE role_name[...] (OBS. a nova role vai pertencer à role definida em IN ROLE)
+IN GROUP role_name[...]
+ROLE role_name[...] (OBS. significa que a role que eu estou informando passa a pertencer ao group da nova role)
+Exemplos: 
+CREATE ROLE PedroKantek [IN ROLE role_name[Profesores]] - PedroKantek passa a pertencer à role Professores
+CREATE ROLE PedroKantek [ROLE role_name[Professores]] - Professores passa a pertencer à role PedroKantek
+ADMIN role_name[...] (OBS. inclui a role como admin passando a ter as permissões
+USER role_name[...] (Obs. deprecated)
+SYSID uid (Obs. deprecated)
+
+Associação entre roles : 
+Quando uma role assume as permissões de outra role.
+Necessário a opção INHERIT
+
+No momento da criação da role :
+ - IN ROLE (passa a pertencer a role informada)
+ - ROLE (a role informada passa a pertencer a nova role)
+Ou apoós a criação da role :
+ - GRANT[role a ser concedida] TO[role a assumir as permissões]
+
+
+3. Administrando acessos (GRANT)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

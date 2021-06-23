@@ -36,6 +36,7 @@ ADMIN role_name[...] (OBS. inclui a role como admin passando a ter as permissõe
 USER role_name[...] (Obs. deprecated)
 SYSID uid (Obs. deprecated)
 
+------------------------------------------------------------------------------------
 Associação entre roles : 
 Quando uma role assume as permissões de outra role.
 Necessário a opção INHERIT
@@ -43,11 +44,181 @@ Necessário a opção INHERIT
 No momento da criação da role :
  - IN ROLE (passa a pertencer a role informada)
  - ROLE (a role informada passa a pertencer a nova role)
-Ou apoós a criação da role :
+Ou após a criação da role :
  - GRANT[role a ser concedida] TO[role a assumir as permissões]
 
+Exemplos:
+CREATE ROLE professores
+NOCREATEDB
+NOCREATEROLE
+INHERIT
+NOLOGIN
+NOBYPASSRLS
+CONNECTION LIMIT -1;
 
-3. Administrando acessos (GRANT)
+CREATE ROLE daniel LOGIN CONNECTION LIMIT 1 PASSWORD '123456' IN ROLE professores;
+ - a role daniel passa a assumir as permissões da role professores.
+CREATE ROLE daniel LOGIN CONNECTION LIMIT 1 PASSWORD '123456' ROLE professores;
+ - a role professores passa a assumir as permissões da role daniel.
+CREATE ROLE daniel LOGIN CONNECTION LIMIT 1 PASSWORD '123456;
+GRANT professores TO daniel;
+ - permissão é dada após a criação role com o GRANT.
+
+------------------------------------------------------------------------------------
+Desassociar membros entre roles :
+REVOKE [role que será revogada] FROM [role que terá suas permissões revogadas]
+REVOKE professores FROM daniel;
+ - por exemplo se Daniel não pertence mais ao quadro de professores da instituição.
+
+------------------------------------------------------------------------------------
+Alterando uma role :
+ALTER ROLE role_specification [WITH] option [...]
+onde as opções podem ser :
+
+SUPERUSER | NOSUPERUSER
+CREATEDB | NOCREATEDB
+CREATEROLE | NOCREATEROLE
+INHERIT | NOINHERIT
+LOGIN | NOLOGIN
+REPLICATION | NOREPLICATION
+BYPASSRLS | NOBYPASSRLS
+CONNECTION LIMIT connlimit
+ENCRYPTED | UNENCRYPTED | PASSWORD 'password'
+VALID UNTIL 'timestamp'
+
+------------------------------------------------------------------------------------
+Excluindo um role
+DROP ROLE role_specification
+DROP ROLE daniel;
+
+
+3. Mão na massa !
+3.1 criando usuário :
+No pgAdmin4 : 
+CREATE ROLE professores NOCREATEDB NOCREATEROLE INHERIT NOLOGIN NOBYPASSRLS CONNECTION LIMIT 10; 
+Conferindo, no SQL Shell (psql) :
+\du - para listar as roles existentes no banco criado. (imagem > 05-lista-de-roles-sql-shell-psql.png)
+
+Obs.1 não é preciso declarar nocreatedb, nocreaterole, pois se não for declarado nada eles são default.
+Obs2. pode-se listar SELECT * FROM pg_roles; para listar todas as roles disponíveis.
+Obs3. para fazer comentário no pgAdmim : '--' ex: --CREATE ROLE professores;
+
+3.2 alterando usuário :
+No pgAdmin4 :
+ALTER ROLE professores PASSWORD '123456';
+Conferindo, no SQL Shell (psql) :
+\q - pra sair do banco
+-U professores auladb - para acessar como a role professores, e a resposta deve ser :
+FATAL: role "professores" is not permitted to log in postgres$
+
+3.3 Criando usuário com acesso a login :
+CREATE ROLE daniel LOGIN PASSWORD '123456'
+
+3.4 Deletando role :
+DROP ROLE daniel
+
+3.5 Criado role pertencendo a outra role :
+CREATE ROLE daniel LOGIN PASSWORD '123456' IN ROLE professores;
+
+
+4. Administrando acessos (GRANT)
+Definição
+São privilégios de acesso aos objetos do banco de dados.
+
+4.1. Concedendo Privilégios :
+Opções: -tabela, coluna, sequence, -database, domain, foreign data wrapper, foreign server, function, language, large object, -schema, tablespace, type.
+
+ - Database
+GRANT{{CREATE | CONNECT | TEMPORARY | TEMP} [,...] | ALL[PRIVILEGES]}
+ ON DATABASE database_name[,...]
+ TO role_specification[,...][WITH GRANT OPTION]
+
+ - Schema
+GRANT{{CREATE | USAGE} [,...] | ALL[PRIVILEGES]}
+ ON SCHEMA schema_name[,...]
+ TO role_specification[,...][WITH GRANT OPTION]
+
+ - Table
+GRANT{{SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | TRIGGER} [,...] ALL[PRIVILEGES]}
+ ON {[TABLE] table_name[,...] | ALL TABLES IN SCHEMA schema_name[,...]}
+ TO role_specification[,...][WITH GRANT OPTION]
+
+4.2. Revogando Privilégios :
+Revoke :
+Retira as permissões da role.
+
+ - Database
+REVOKE[GRANT OPTION FOR]
+ {{CREATE | CONNECT | TEMPORARY | TEMP} [,...] | ALL[PRIVILEGES]}
+ ON DATABASE database_name[,...]
+ FROM{[GROUP]role_name | PUBLIC}[,...]
+ [CASCADE | RESTRICT]
+
+ - Schema
+REVOKE[GRANT OPTION FOR]
+ {{CREATE | USAGE} [,...] | ALL[PRIVILEGES]}
+ ON SCHEMA schema_name[,...]
+ FROM{[GROUP] role_name | PUBLIC} [,...]
+ [CASCADE | RESTRICT]
+
+ - Table
+REVOKE[GRANT OPTION FOR]
+ {{SELECT | INSERT | UPDATE | DELETE | TRUNCATE | REFERENCES | TRIGGER} [,...] | ALL[PRIVILEGES]}
+ ON {[TABLE] table_name[,...] | ALL TABLES IN SCHEMA schema_name[,...]}
+ FROM {[GROUP]role_name | PUBLIC}[,...]
+ [CASCADE | RESTRICT]
+
+4.3. Revogando todos os privilégios :
+
+REVOKE ALL ON DATABASE[database] FROM [role]
+REVOKE ALL ON SCHEMA[schema] FROM [role]
+REVOKE ALL ON TABLES IN SCHEMA[schema] FROM [role]
+
+
+5. Mão na massa !
+
+----------------------------------------------------------------------------------------
+No pgAdmin4 : 
+CREATE ROLE tiago LOGIN PASSWORD '123456'
+CREATE TABLE teste (nome varchar); --criado uma tabela com uma coluna chamada nome
+GRANT ALL ON TABLE teste TO professores; --concedido todos os privilégios a role professores na tabela teste.
+
+No SQL Shell (psql) :
+Server [localhost]: 127.0.0.1
+Database [postgres]: auladb
+Port [5432]: 5432
+Username [postgres]: tiago
+Senha para usuário tiago: 123456
+psql (11.12)
+Digite "help" para ajuda.
+
+auladb=> SELECT nome FROM teste;
+
+E a resposta foi :
+ERROR:  permission denied for table teste
+
+Ok. Perfeito, porque Tiago não tem nenhum permissão.
+
+----------------------------------------------------------------------------------------
+
+Agora, dropar a role tiago e criá-la novamente dentro da role professores.
+
+No pgAdmin4 :
+DROP ROLE tiago;
+CREATE ROLE tiago INHERIT LOGIN PASSWORD '123456' IN ROLE professores;
+
+E a resposta foi :
+auladb=> SELECT nome FROM teste;
+ nome
+------
+(0 registro)
+
+----------------------------------------------------------------------------------------
+
+Revogando os privilégios de tiago dados pela role professores :
+REVOKE professores FROM tiago.
+
+Testando novamente no Shell SQL, a resposta foi aceso negado para tiago.
 
 
 

@@ -1,0 +1,148 @@
+------------------------------------------------------------------------------------------------------------
+DATABASE E SCHEMA
+
+Database
+Database é o banco de dados, grupo de schemas e seu objetos, como tabelas, types, views, funções, entre outros. Seus schemas e objetos não podem ser compartilhados entre si. Cada database é separado um do outro compartilhando apenas usuários/roles e configurações do cluster PostgreSQL.
+
+Schemas
+Schemas é um grupo de objetos, como tabelas, types, views, funções, entre outros. É possível relacionar objetos entre diversos schemas. 
+Por exemplo : schema public e schema curso podem ter tabelas com o mesmo nome, relacionando-se entre si.
+
+Objetos
+Objetos são as tabelas, views, funções, types, sequences, entre outros, pertencentes aos mesmos schemas.
+
+Database
+CREATE DATABASE name
+ [[WITH][OWNER[=] user_name]
+  [TEMPLATE[=]template]
+  [ENCODING[=]encoding]
+  [LC_COLLATE[=]lc_collate]
+  [LC_CTYPE[=]lc_type]
+  [TABLESPACE[=]tablespace_name]
+  [ALLOW_CONNECTIONS[=]allowconn]
+  [CONNECTION LIMIT[=]connlimit]
+  [IS_TEMPLATE[=]is_template]
+  
+ALTER DATABASE name RENAME TO new_name
+ALTER DATABASE name OWNER TO {new_owner | CURRENT_USER | SESSION_USER}
+ALTER DATABASE name SET TABLESPACE new_tablespace
+
+DROP DATABASE [name_database]
+
+Schema
+CREATE SCHEMA schema_name [AUTHORIZATION role_specification]
+
+ALTER SCHEMA name RENAME TO new_name
+ALTER SCHEMA name OWNER TO {new_owner | CURRENT_USER | SESSION_USER}
+
+DROP SCHEMA [name_schema]
+
+Melhores práticas :
+Sempre que for fazer alguma operação em um schema, verifique se o mesmo já existe ou não (IF EXISTS / IF NOT EXISTS).
+CREATE SCHEMA IF NOT EXISTS schema_name [AUTHORIZATION role_specification]
+DROP SCHEMA IF EXISTS [name]
+
+------------------------------------------------------------------------------------------------------------
+TABELAS, COLUNAS E TIPOS DE DADOS
+
+Definição
+Tabelas são conjuntos de dados dispostos em colunas e linhas referentes a um objetivo comum.
+As colunas são consideradas como 'campos da tabela', como atribtos da tabela.
+As linhas de uma tabela são chamadas também de tuplas e é onde estão contidos os valores, os dados.
+
+Exemplo:
+Tabela = automável
+COLUNA 1 = tipo (carro, moto, avião, helicóptero)
+COLUNA 2 = ano_fabricacao (2010, 2011, 2020)
+COLUNA 3 = capacidade_pessoas (1, 2, 350)
+COLUNA 4 = fabricante (Honda, Ford, Boeing)
+
+------------------------------------------------------------------------------------------------------------
+Primary Key / Chave primária / PK
+No conceito de modelo de dados relacional e obedecendo as regras de normalização, uma PK é um conjunto de um ou mais campos que nunca se repetem em uma tabela e que seus valores garantem a integridade do dado único e a utilização do mesmo como referência para o relacionamento entre demais tabelas.
+ - não pode haver ocorrências de uma mesma entidade com o mesmo conteúdo na PK;
+ - a chave primária não pode ser composta por atributo opcional, ou seja, atributo que aceite nulo;
+ - os atributos identificadores devem ser o conjunto mínimo que pode identificar cada instância de uma entidade;
+ - não devem ser usadas chaves externas;
+ - não deve conter informação volátil.
+
+
+Foreign Key / Chave Estrangeira / FK
+Campo ou conjunto de campos que são referências de chaves primárias de outras tabelas ou da mesma tabela. Sua principal função é garantir a integridade referencial entre tabelas.
+
+------------------------------------------------------------------------------------------------------------
+Tipos de dados
+
+Numeric Types
+Monetary Types
+Character Types
+Binary Data Types
+Data/Time Types
+Boolean Type
+Enumerated Types
+Geometric Types
+Network Address Types
+Bit String Types
+Text Search Types
+UUID Type
+XML Type
+JSON Types
+Arrays 
+Composite Types
+Range Types
+Domain Types
+Object Identifier Types
+pg_lsn Type
+Pseudo-Types
+
+Obs. para Postgres o campo com recurso de autoincremento não é declarado com o parâmetro AUTO INCREMENT. Basta utilizar os tipos numéricos : smallserial, serial, bigserial.
+
+------------------------------------------------------------------------------------------------------------
+DML e DDL
+
+DML - Data Manipulation Language
+Linguagem de manupulação de dados
+=================================
+INSERT, UPDATE, DELETE, SELECT
+* o select, alguns consideram como DML, outros como DQL, que significa data query language, ou linguagem de consulta de dados.
+
+Exemplos :
+INSERT INTO [nome_tabela] ([campos_da_tabela])
+   VALUES ([valores de acordo com a ordem dos campo acima]);
+
+INSERT INTO [nome_tabela] ([campos_da_tabela])
+   SELECT[valores de acordo com a ordem dos campo acima];
+
+UPDATE [nome_tabela] SET
+[campo1] = [novo valor do campo1],
+[campo2] = [novo valor do campo2],
+...
+WHERE [condições];
+Atenção : muito cuidado com os updates. Sempre utilize-os com condição.
+
+DELETE FROM [nome_tabela]
+WHERE [condições];
+
+SELECT [campos_tabela] FROM [nome_tabela] WHERE [condições];
+
+DDL - Data Definition Language
+Linguagem de definição de dados.
+================================
+CREATE, ALTER, DROP
+
+Exemplos :
+CREATE TABLE IF NOT EXISTS banco(
+   codigo INTEGER PRIMARY KEY,
+   nome VARCHAR(50) NOT NULL,
+   data_criação TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE banco ADD COLUMN tem_poupanca BOOLEAN;
+
+DROP TABLE IF EXISTS banco;
+
+
+
+
+
+

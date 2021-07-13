@@ -8,7 +8,8 @@ Configurar a inicialização (automática ou manual) do PostgreSql
 Windows >> Services >> postgresql-x64-11
  - duplo clique no botão do mouse > Geral > Tipo de inicialização: Automático/Manual/Desativado
 
-Essa configuração é importante quando se tem mais de um banco rodando na mesma máquina, porque já tive caso do banco não funcionar, por ter outro banco instalado. Pode ser preciso desabilitar um para usar outro.
+Essa configuração é importante quando se tem mais de um banco rodando na mesma máquina, porque já tive caso do banco não funcionar, por ter outro banco instalado. 
+Pode ser preciso desabilitar um para usar outro.
 
 
 CONFIGURAÇÃO 
@@ -32,7 +33,7 @@ No sistema operacional UBUNTU, se o PostgreSQL foi instalado a partir do reposit
 CONFIGURAÇÕES DE CONEXÃO
  - LISTEN_ADDRESSES
    Endereço(s) TCP/IP das interfaces que o servidor PostgreSQL vai escutar/liberar conexões
-   Obs: colocar asterisco na configuração, liberando acesso ao banco de dados para qualquer endereço da       internet, não é recomendado para aplicação em produção
+   Obs: colocar asterisco na configuração, liberando acesso ao banco de dados para qualquer endereço da internet, não é recomendado para aplicação em produção
  - POST
    A porta TCP que o servidor PostgreSQL vai ouvir. O padrão é 5432
  - MAX_CONNECTIONS
@@ -58,7 +59,8 @@ CONFIGURAÇÕES DE MEMÓRIA
 
 -----------------------------------------------------------------------------------
 Arquivo pg_hba.conf
-Arquivo responsável pelo controle de autenticação dos usuários no servidor Postgresql. Libera determinado usuário acessar de determinado usuário. Ex. um usuário de vendas pode ter acesso liberado apenas a partir de um IP específico e acessar área específica do banco.
+Arquivo responsável pelo controle de autenticação dos usuários no servidor Postgresql. Libera determinado usuário acessar de determinado usuário. 
+Ex. um usuário de vendas pode ter acesso liberado apenas a partir de um IP específico e acessar área específica do banco.
 
 Métodos de autenticação
 TRUST - conexão sem requisição de senha
@@ -121,7 +123,9 @@ Acessar Windows>>>Serviços
  - Com o botão direito do mouse, mostra todas as opções.
 
 Binários do PostgreSQL - Caso tenha compilado o PostgreSQL para utilizar
-- createdb, creatuser, dropdb, dropuser, initdb, pg_ctl, pg_basebackup, pg_dump/pg_dumpall (pseudo backup - não é considerado backup, porque não é possível restaurar o db), pg_restore, psql (binário para acessar o banco através do sistema opeacional), reindexdb, vacuumdb (reorganizar os index, por exemplo)
+- createdb, creatuser, dropdb, dropuser, initdb, pg_ctl, pg_basebackup, pg_dump/pg_dumpall (pseudo backup - não é considerado backup, 
+  porque não é possível restaurar o db), pg_restore, psql (binário para acessar o banco através do sistema opeacional), 
+  reindexdb, vacuumdb (reorganizar os index, por exemplo)
 
 -----------------------------------------------------------------------------------
 Arquiterura/Hierarquia

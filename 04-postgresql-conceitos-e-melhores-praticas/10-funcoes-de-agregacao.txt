@@ -1,0 +1,77 @@
+Funções de agregação
+Como a maioria dos outros produtos de banco de dados relacional, o PostgreSQL oferece suporte a funções agregadas . 
+Uma função de agregação calcula um único resultado de várias linhas de entrada. 
+Por exemplo, existem funções de agregação para calcular como count, sum, avg(média), max(máximo) e min(mínima) ao longo de um conjunto de linhas.
+
+Obs.:
+Existe uma View que mostra todas as colunas de uma tabela.
+SELECT * FROM information_schema.columns WHERE table_name = 'banco';
+
+Pode-se também mostrar apenas o nome da coluna e o tipo do dado.
+SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'banco';
+
+-- AVG (Média)
+-- COUNT
+-- MAX
+-- MIN
+-- SUM
+
+------------------------------------------------------------------------------------------------------
+SELECT * FROM cliente_transacoes;
+-- AVG (Média)
+SELECT AVG(valor) FROM cliente_transacoes;
+
+------------------------------------------------------------------------------------------------------
+SELECT * FROM cliente
+-- COUNT
+SELECT COUNT(numero) FROM cliente;
+SELECT COUNT(numero), email FROM cliente WHERE email ILIKE '%gmail.com' GROUP BY email;
+
+Obs.: O ILIKE possui as mesmas características do like, porém não é case-sensitive, ou seja, 
+não faz distinção entre maiúsculas e minusculas, então 'MARIA' é igual 'maria' para o ilike.
+
+------------------------------------------------------------------------------------------------------
+-- COUNT + função HAVING (Conta um determinado item havendo dentro e um limite estabilecido
+SELECT COUNT(id), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id;
+SELECT COUNT(id), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id HAVING COUNT(id) > 150;
+
+------------------------------------------------------------------------------------------------------
+-- MAX (valor máximo do valor da transação, agrupado por tipo de transação)
+SELECT MAX(valor) FROM cliente_transacoes;
+SELECT MAX(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id;
+
+------------------------------------------------------------------------------------------------------
+-- MIN (valor mínimo do valor da transação, agrupado por tipo de transação)
+SELECT MIN(valor) FROM cliente_transacoes;
+SELECT MIN(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id;
+
+-- Obs : o agrupamento é necessário para realizar a busca.
+
+------------------------------------------------------------------------------------------------------
+-- SUM
+SELECT SUM(valor) FROM cliente_transacoes;
+
+SELECT SUM(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id;
+
+------------------------------------------------------------------------------------------------------
+-- SUM + função ORDER BY ... DESC | ASC (função de ordenação decrescente ou ascendente)
+ 
+SELECT SUM(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id ORDER BY tipo_transacao_id DESC;
+SELECT SUM(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id ORDER BY tipo_transacao_id ASC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

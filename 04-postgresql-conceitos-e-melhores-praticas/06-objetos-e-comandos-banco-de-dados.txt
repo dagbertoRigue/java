@@ -2,7 +2,8 @@
 DATABASE E SCHEMA
 
 Database
-Database é o banco de dados, grupo de schemas e seu objetos, como tabelas, types, views, funções, entre outros. Seus schemas e objetos não podem ser compartilhados entre si. Cada database é separado um do outro compartilhando apenas usuários/roles e configurações do cluster PostgreSQL.
+Database é o banco de dados, grupo de schemas e seu objetos, como tabelas, types, views, funções, entre outros. Seus schemas e objetos não podem ser compartilhados entre si.
+Cada database é separado um do outro compartilhando apenas usuários/roles e configurações do cluster PostgreSQL.
 
 Schemas
 Schemas é um grupo de objetos, como tabelas, types, views, funções, entre outros. É possível relacionar objetos entre diversos schemas. 
@@ -59,7 +60,8 @@ COLUNA 4 = fabricante (Honda, Ford, Boeing)
 
 ------------------------------------------------------------------------------------------------------------
 Primary Key / Chave primária / PK
-No conceito de modelo de dados relacional e obedecendo as regras de normalização, uma PK é um conjunto de um ou mais campos que nunca se repetem em uma tabela e que seus valores garantem a integridade do dado único e a utilização do mesmo como referência para o relacionamento entre demais tabelas.
+No conceito de modelo de dados relacional e obedecendo as regras de normalização, uma PK é um conjunto de um ou mais campos que nunca se repetem em uma tabela.
+Seus valores garantem a integridade do dado único e a utilização do mesmo como referência para o relacionamento entre demais tabelas.
  - não pode haver ocorrências de uma mesma entidade com o mesmo conteúdo na PK;
  - a chave primária não pode ser composta por atributo opcional, ou seja, atributo que aceite nulo;
  - os atributos identificadores devem ser o conjunto mínimo que pode identificar cada instância de uma entidade;
@@ -68,7 +70,8 @@ No conceito de modelo de dados relacional e obedecendo as regras de normalizaç�
 
 
 Foreign Key / Chave Estrangeira / FK
-Campo ou conjunto de campos que são referências de chaves primárias de outras tabelas ou da mesma tabela. Sua principal função é garantir a integridade referencial entre tabelas.
+Campo ou conjunto de campos que são referências de chaves primárias de outras tabelas ou da mesma tabela. 
+Sua principal função é garantir a integridade referencial entre tabelas.
 
 ------------------------------------------------------------------------------------------------------------
 Tipos de dados

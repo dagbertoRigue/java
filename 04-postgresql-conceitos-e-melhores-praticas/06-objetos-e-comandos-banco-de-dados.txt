@@ -145,6 +145,10 @@ ALTER TABLE banco ADD COLUMN tem_poupanca BOOLEAN;
 DROP TABLE IF EXISTS banco;
 
 
+Prática :
+Acessar o arquivo ddl.sql para estruturação do banco
+Acessar o arquivo dml.sql para preenchimento dos dados nas tabelas.
+
 
 
 

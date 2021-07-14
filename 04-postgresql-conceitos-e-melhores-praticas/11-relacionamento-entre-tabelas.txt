@@ -1,0 +1,115 @@
+Join
+----------------------------------------------------------------------------------
+JOIN(INNER)
+Utiliza-se quando um campo de uma tabela é exatamente igual à um determinado campo de outra tabela.
+
+SELECT tabela1.campoX, tabela2.campoY 
+   FROM tabela1
+   JOIN tabela2
+      ON tabela2.campoY = tabela1.campoX
+
+----------------------------------------------------------------------------------
+LEFT JOIN (OUTER)
+Traz como resultado, os resultados da tabela da esquerda (tabela1) que estão relacionado com a tabela da direita.
+
+SELECT tabela1.campos, tabela2.campos 
+   FROM tabela1
+   LEFT JOIN tabela2
+      ON tabela2.campo = tabela1.campo
+
+----------------------------------------------------------------------------------
+RIGHT JOIN (OUTER)
+Traz como resultado, os resultados da tabela da direita (tabela2) que estão relacionado com a tabela da esquerda.
+
+SELECT tabela1.campos, tabela2.campos 
+   FROM tabela1
+   RIGHT JOIN tabela2
+      ON tabela2.campo = tabela1.campo
+
+----------------------------------------------------------------------------------
+
+FULL JOIN (FULL OUTER JOIN)
+Retorna todos os registros quando há uma correspondência nos registros da tabela esquerda (tabela1) ou direita (tabela2).
+
+SELECT tabela1.campos, table2.campos
+   FROM tabela1
+   FULL JOIN tabela2
+      ON tabela2.campos = tabela2.campos
+
+----------------------------------------------------------------------------------
+
+CROSS JOIN
+Todos os dados de uma tabela serão cruzados com todos os dados da tabela referenciada no CROSS JOIN criando uma matriz.
+
+SELECT tabela1.campos, tabela2.campos
+   FROM tabela1
+   CROSS JOIN tabela2
+
+----------------------------------------------------------------------------------
+
+Prática :
+
+SELECT numero, nome FROM banco;
+SELECT banco_numero, numero, nome FROM agencia;
+SELECT numero, nome FROM cliente;
+SELECT banco_numero, agencia_numero, numero, digito, cliente_numero FROM conta_corrente;
+SELECT id, nome FROM tipo_transacao;
+SELECT banco_numero, agencia_numero, conta_corrente_numero, conta_corrente_digito, cliente_numero, valor FROM cliente_transacoes;
+
+SELECT COUNT(1) FROM banco; -- 151
+SELECT COUNT(1) FROM agencia; -- 296
+
+-- traz 296 linhas como resultado, que é o número de ocorrências
+SELECT banco.numero, banco.nome, agencia.numero, agencia.nome FROM banco 
+   JOIN agencia ON agencia.banco_numero = banco.numero;
+
+-- traz 296 como resultado, que é a contagem de ocorrências
+SELECT COUNT(banco.numero) FROM banco --296
+   JOIN agencia ON agencia.banco_numero = banco.numero;
+   
+-- traz 9 como resultado, que é a quantidade de bancos cadastrados na tabela
+SELECT COUNT(DISTINCT banco.numero) FROM banco --296
+   JOIN agencia ON agencia.banco_numero = banco.numero;
+
+-- traz como resultado 438 registros, porém, apenas 296 possuem o campo agencia.numero diferente de null
+SELECT banco.numero, banco.nome, agencia.numero, agencia.nome FROM banco
+LEFT JOIN agencia ON agencia.banco_numero = banco.numero;
+
+-- o RIGHT JOIN funciona apenas quando a tabela da esquerda possui mais registros que a tabela da direita
+-- por isso, inverta para trazer um resultado plausível.
+SELECT agencia.numero, agencia.nome, banco.numero, banco.nome FROM agencia
+RIGHT JOIN banco ON banco.numero = agencia.banco_numero;
+
+-- teste sem inverter
+SELECT banco.numero, banco.nome, agencia.numero, agencia.nome FROM banco
+RIGHT JOIN agencia ON agencia.banco_numero = banco.numero;
+
+-- traz o mesmo resultado do LEFT JOIN
+SELECT banco.numero, banco.nome, agencia.numero, agencia.nome FROM banco
+FULL JOIN agencia ON agencia.banco_numero = banco.numero;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

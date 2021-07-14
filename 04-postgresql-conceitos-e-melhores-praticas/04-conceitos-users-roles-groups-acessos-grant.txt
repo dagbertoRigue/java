@@ -3,7 +3,7 @@
 Definição :
 Roles (papéis ou funções), users (usuários) e grupo de usuários são 'contas', perfis de atuação em um banco de dados que possuem permissões em comum ou específicas.
 Nas versões anteriores do PostgreSQL 8.1, usuários e roles tinham comportamentos diferentes. Atualmente, roles e users são alias.
-É possível que roles pertençam a outras roles ou users pertençam a outros users.
+É possível que roles pertençam a outras roles, ou users pertençam a outros users, ou ainda que roles pertençam a users e vice-versa.
 Ex: 
 Role admin - com acesso all, permissão de criar outros usuários, por exemplo. 
 Role professores - com acesso para escrever em 10 tabelas exclusivas para professores. 

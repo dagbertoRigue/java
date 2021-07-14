@@ -1,0 +1,76 @@
+Idempotência
+Propriedade que algumas ações/operações possuem possibilitando-as de serem executadas diversas vezes sem alterar o resultado após a aolicação inicial.
+ex: IF EXISTS / IF NOT EXISTS
+
+Melhores Práticas
+Importante as tabelas possuírem campo que realmente serão utilizadas e que sirvam de atributo direto a um objetivo em comum.
+ - criar/acrescentar colunas que são "atributos básicos" do objeto;
+ - cuidado com regras (constraints);
+ - cuidados com o excesso de FKs;
+ - cuidado com o tamanho indevido de colunas, por exemplo, coluna CEP VARCHAR(255).
+
+SELECT * FROM tabela;
+ - evite utilizar o '*' (all) para consultas.
+
+Insert - Idempotência (ON CONFLICT)
+INSERT INTO agencia (banco_numero, numero, nome) VALUES (341, 1, 'Centro') 
+   ON CONFLICT (banco_numero, numero) DO NOTHING;
+
+Atenção :
+Update e delete DEVEM TER a condicional 'WHERE' para não alterar ou apagar toda a tabela.
+
+Atenção :
+TRUNCATE - "esvazia" a tabela
+
+TRUNCATE [tabela] [ONLY] name [*][,...]
+   [RESTART | CONTINUE IDENTITY] [CASCADE | RESTRICT]
+
+RESTART IDENTITY - reinicia o campo definido como serial (PK). Quando for inserido o registro após o truncate, o serial partirá o 0. 
+(não recomendado por causar problemas de confiabilidade nos dados, já que esse dado pode ser Foreign Key em outra tabela, perdendo a rastreabilidade)
+CONTINUE IDENTITY - mantém a sequência do campo, mesmo que a tabela esteja sendo reiniciada, após o Tuncate.
+CASCADE - permite a realização do truncate, mesmo que a tabela possua algum campo que seja Foreign Key.
+RESTRICT - esse é o padrão, onde não será realizado o truncate, caso exista alguma campo Foreign Key.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Prática :
+
+CREATE TABLE IF NOT EXISTS teste(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TABLE IF EXISTS teste;
+
+CREATE TABLE IF NOT EXISTS teste(
+	cpf VARCHAR(11) NOT NULL,
+	nome VARCHAR(50) NOT NULL,
+	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (cpf)
+);
+
+INSERT INTO teste (cpf, nome, created_at)
+	VALUES ('04168846954', 'Dagberto Rigue', '2019-07-01 14:07:05');
+	
+SELECT * FROM teste;
+
+-- Insert de uma mesma informação para testar a falta de idempotência
+INSERT INTO teste (cpf, nome, created_at)
+	VALUES ('04168846954', 'Dagberto Rigue', '2019-07-01 14:07:05');
+/*
+** Resposta :
+** ERROR:  duplicate key value violates unique constraint "teste_pkey"
+** DETAIL:  Key (cpf)=(04168846954) already exists.
+** SQL state: 23505
+*/
+
+-- Insert de uma mesma informação para testar a idempotência
+INSERT INTO teste (cpf, nome, created_at)
+	VALUES ('04168846954', 'Dagberto Rigue', '2019-07-01 14:07:05') ON CONFLICT (cpf) DO NOTHING;
+/*
+** Resposta :
+** INSERT 0 0
+** Query returned successfully in 56 msec.
+*/
+
+

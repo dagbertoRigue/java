@@ -58,20 +58,3 @@ SELECT SUM(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_trans
  
 SELECT SUM(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id ORDER BY tipo_transacao_id DESC;
 SELECT SUM(valor), tipo_transacao_id FROM cliente_transacoes GROUP BY tipo_transacao_id ORDER BY tipo_transacao_id ASC;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

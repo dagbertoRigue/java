@@ -1,0 +1,348 @@
+Funções :
+
+Definição :
+Conjunto de códigos que são executados dentre de uma transação com a finalidade de facilitar a programação e obter o reaproveitamento/reutilização de códigos.
+
+Existem 4 tipo de funções :
+ - query language functions (funções escritas em SQL)
+ - procedural language functions (funções escritas em, por exemplo, PL/pgSQL, ou PL/py, ...)
+ - internaç functions
+ - C-language functions
+
+Funções que podem ser criadas pelo usuários : USER DEFINED FUNCTIONS.
+
+Linguagens :
+ - SQL
+ - PL/PGSQL
+ - PL/PY
+ - PL/PHP
+ - PL/RUBY
+ - PL/JAVA
+ - ...
+Essas são algumas linguagens que o Postgres permite que sejam usadas.
+
+
+
+Criação de uma função :
+
+CREATE [ OR REPLACE ] FUNCTION
+    name ( [ [ argmode ] [ argname ] argtype [ { DEFAULT | = } default_expr ] [, ...] ] )
+    [ RETURNS rettype
+      | RETURNS TABLE ( column_name column_type [, ...] ) ]
+  { LANGUAGE lang_name
+    | TRANSFORM { FOR TYPE type_name } [, ... ]
+    | WINDOW
+    | IMMUTABLE | STABLE | VOLATILE | [ NOT ] LEAKPROOF
+    | CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT
+    | [ EXTERNAL ] SECURITY INVOKER | [ EXTERNAL ] SECURITY DEFINER
+    | PARALLEL { UNSAFE | RESTRICTED | SAFE }
+    | COST execution_cost
+    | ROWS result_rows
+    | SUPPORT support_function
+    | SET configuration_parameter { TO value | = value | FROM CURRENT }
+    | AS 'definition'
+    | AS 'obj_file', 'link_symbol'
+  } ...
+
+
+-------------------------------------------------------------------------------------------------
+Idempotência : evita erros
+
+CREATE OR REPLACE FUNCTION [nome da função]
+ - Mesmo nome
+ - Mesmo tipo de retorno
+ - Mesmo número de parâmetros
+
+Para usar o 'OR REPLACE', deverá ser respeitadas as três regras acima.
+
+
+RETURNS
+Tipo de retorno (qual é o data type que ela irá retornar)
+ - INTEGER
+ - CHAR / VARCHAR
+ - BOOLEAN
+ - ROW
+ - TABLE
+ - JSON
+
+LANGUAGE
+ - SQL
+ - PL/PGSQL
+ - PL/PY
+ - ...
+
+SECURITY
+ - INVOKER (Padrão)
+ - DEFINER (Executa com as permissões do usuário que criou a função)
+
+COMPORTAMENTO
+ - IMMUTABLE
+   Não pode alterar o banco de dados.
+   Funções que garantem o mesmo resultado para os mesmos argumentos/parâmetros da função.
+   Evitar a utilização de selects, pois tabelas podem sofrer alterações.
+ - STABLE
+   Não pode alterar o banco de dados.
+   Funções que garantem o mesmo resultado para os mesmos argumentos/parâmetros da função.
+   Trabalha melhor com tipos de current_timestamp e outros tipos variáveis.
+   Podem conter selects.
+ - VOLATILLE (Padrão)
+   Comportamento padrão. Aceita todos os cenários.
+
+SEGURANÇA E BOAS PRÁTICAS
+ - CALLED ON NULL INPUT
+   Padrão.
+   Se qualquer um dos parâmetros/argumentos for null, a função será executada.
+ - RETURNS NULL ON NULL INPUT
+   Se qualquer um dos parâmetros/argumentos for null, a função retornará NULL e não será executada.
+Normalmente, na documentação é pedido para se usar o Called on null para que a responsabilidade do tratamento seja inteiramente do desenvolvedor.
+
+ - SECURITY INVOKER
+   Padrão.
+   A função é executada com as permissões de quem executa.
+ - SECURITY DEFINER
+   A função é executada com as permissões de quem criou a função.
+
+RECURSOS
+ - COST
+   Custo por row em unidade de CPU.
+ - ROWS
+   Número estimado de linhas que será analisada pelo planer.
+Esses são conceitos mais avançados para análise de performance das funções.
+
+------------------------------------------------------------------------------------------
+
+SQL FUNCTION
+Obs.: Não é possível utilizar transações em SQL functions, apenas em PL/PGSQL Functions.
+
+CREATE OR REPLACE FUNCTION fc_somar(INTEGER, INTEGER)
+RETURNS INTEGER
+LANGUAGE SQL
+AS $$
+	SELECT $1 + $2;
+$$;
+
+Para ficar mais claro, visualmente, pode-se usar outra abordagem :
+
+CREATE OR REPLACE FUNCTION fc_somar(num1 INTEGER, num2 INTEGER)
+RETURNS INTEGER
+LANGUAGE SQL
+AS $$
+	SELECT num1 + num2;
+$$;
+
+Outro exemplo :
+
+CREATE OR REPLACE FUNCTION fc_bancos_add (p_numero INTEGER, p_nome VARCHAR, p_ativo BOOLEAN)
+RETURNS TABLE (numero INTEGER, nome VARCHAR)
+RETURNS NULL ON NULL INPUT
+LANGUAGE SQL
+AS $$
+	INSERT INTO banco (numero, nome, ativo) VALUES (p_numero, p_nome, p_ativo);
+	SELECT numero, nome FROM banco WHERE numero = p_numero;
+$$;
+
+------------------------------------------------------------------------------------------
+PL/PGSQL FUNCTION
+
+CREATE OR REPLACE FUNCTION bancos_add (p_numero INTEGER, p_nome VARCHAR, p_ativo BOOLEAN)
+RETURNS BOOLEAN
+LANGUAGE PLPGSQL
+AS $$
+DECLARE variavel_id INTEGER;
+BEGIN
+	SELECT INTO variavel_id numero FROM banco WHERE nome = p_nome;
+	
+	IF variavel_id IS NULL THEN
+		INSERT INTO banco (numero, nome, ativo) VALUES (p_numero, p_nome, p_ativo);
+	ELSE
+		RETURN FALSE;
+	END IF;
+	
+	SELECT INTO variavel_id numero FROM banco WHERE nome = p_nome;
+
+	IF variavel_id IS NULL THEN
+		RETURN FALSE;		
+	ELSE
+		RETURN TRUE
+	END IF;
+	
+END; $$;
+
+SELECT banco_add(13, 'Banco da Sorte', TRUE);
+
+Obs.: a instrução 'SELECT INTO' copia dados de uma tabela em uma nova tabela.
+
+-----------------------------------------------------------------------------------------
+Prática :
+
+-- FUNÇÃO DE SOMA
+CREATE OR REPLACE FUNCTION func_somar(INTEGER, INTEGER)
+RETURNS INTEGER
+SECURITY DEFINER
+-- RETURNS NULL ON NULL INPUT
+CALLED ON NULL INPUT
+LANGUAGE SQL
+AS $$
+	SELECT $1 + $2;
+$$;
+SELECT func_somar(2, 10)
+
+--FUNÇÃO PARA SELECT
+CREATE OR REPLACE FUNCTION func_somar(INTEGER, INTEGER)
+RETURNS INTEGER
+SECURITY DEFINER
+-- RETURNS NULL ON NULL INPUT
+CALLED ON NULL INPUT
+LANGUAGE SQL
+AS $$
+	SELECT $1 + $2;
+$$;
+SELECT func_somar(2, 10)
+
+CREATE OR REPLACE FUNCTION banco_manage(p_numero INTEGER,p_nome VARCHAR(50),p_ativo BOOLEAN)
+RETURNS TABLE (banco_numero INTEGER, banco_nome VARCHAR(50), banco_ativo BOOLEAN)
+LANGUAGE PLPGSQL
+SECURITY DEFINER
+RETURNS NULL ON NULL INPUT
+AS $$
+BEGIN
+    -- O COMANDO ABAIXO VAI REALIZAR O INSERT OU O UPDATE DO BANCO
+    -- O COMANDO ON CONFLICT PPODE SER USADO PARA FAZER NADA (DO NOTHING)
+    -- OU PARA REALIZAR UM UPDATE NO NOSSO CASO.
+    INSERT INTO banco (numero, nome, ativo)
+    VALUES (p_numero, p_nome, p_ativo)
+    ON CONFLICT (numero) DO UPDATE SET nome = p_nome, ativo = p_ativo;
+    
+    -- DEVEMOS RETORNAR UMA TABELA
+    -- O RETURN NESTE CASO DEVE SER UMA QUERY
+    RETURN QUERY
+        SELECT numero, nome, ativo
+        FROM banco
+        WHERE numero = p_numero;
+END; $$;
+
+CREATE OR REPLACE FUNCTION agencia_manage(p_banco_numero INTEGER, p_numero INTEGER, p_nome VARCHAR(80), p_ativo BOOLEAN)
+RETURNS TABLE (banco_nome VARCHAR, agencia_numero INTEGER, agencia_nome VARCHAR, agencia_ativo BOOLEAN)
+LANGUAGE PLPGSQL
+SECURITY DEFINER
+RETURNS NULL ON NULL INPUT
+AS $$
+DECLARE variavel_banco_numero INTEGER;
+BEGIN
+    -- AQUI NÓS VAMOS VALIDAR A EXISTÊNCIA DO BANCO
+    -- E PRINCIPALMENTE SE ELE ESTÁ ATIVO
+    SELECT INTO variavel_banco_numero numero
+    FROM vw_bancos
+    WHERE numero = p_banco_numero
+    AND ativo IS TRUE;
+    
+    -- SE OBTIVERMOS O RETORNO DO COMANDO ACIMA
+    -- ENTÃO O BANCO EXISTE E ESTÁ ATIVO
+    -- E PODEMOS PROSSEGUIR COM O INSERT DA AGÊNCIA
+    IF variavel_banco_numero IS NOT NULL THEN
+        -- O COMANDO ABAIXO VAI REALIZAR O INSERT OU O UPDATE DO BANCO
+        -- O COMANDO ON CONFLICT PPODE SER USADO PARA FAZER NADA (DO NOTHING)
+        -- OU PARA REALIZAR UM UPDATE NO NOSSO CASO.
+        -- !!! REPAREM QUE O UPDATE SÓ SERÁ REALIZADO NOS CAMPOS NOME E ATIVO DA AGENCIA !!!
+        -- !!! DESAFIO : QUE TAL MELHORAR ESSE CÓDIGO PARA SER POSSÍVEL A TROCA DE BANCO DAS AGÊNCIAS ???
+        INSERT INTO AGENCIA (banco_numero, numero, nome, ativo)
+        VALUES (p_banco_numero, p_numero, p_nome, p_ativo)
+        ON CONFLICT (banco_numero, numero) DO UPDATE SET
+        nome = p_nome,
+        ativo = p_ativo;
+    END IF;
+
+    -- DEVEMOS RETORNAR UMA TABELA
+    -- O RETURN NESTE CASO DEVE SER UMA QUERY
+    RETURN QUERY
+        SELECT  banco.nome AS banco_nome, 
+                agencia.numero AS agencia_numero, 
+                agencia.nome AS agencia_nome, 
+                agencia.ativo AS agencia_ativo
+        FROM agencia
+        JOIN banco ON banco.numero = agencia.numero
+        WHERE agencia.banco_numero = p_banco_numero
+        AND agencia.numero = p_numero;
+END; $$;
+
+CREATE OR REPLACE FUNCTION cliente_manage(p_numero INTEGER, p_nome VARCHAR(120), p_email VARCHAR(250), p_ativo BOOLEAN)
+RETURNS BOOLEAN
+LANGUAGE PLPGSQL
+SECURITY DEFINER
+CALLED ON NULL INPUT
+AS $$
+BEGIN
+    -- VAMOS VALIDAR SOMENTE OS PARÂMETROS MAIS IMPORTANTES
+    IF p_numero IS NULL OR p_nome IS NULL THEN
+        RETURN FALSE;
+    END IF;
+    
+    -- FAREMOS O INSERT COM TRATAMENTO DE VALORES NULOS
+    INSERT INTO cliente (numero, nome, email, ativo)
+    VALUES (p_numero, p_nome, COALESCE(p_email,CONCAT(p_nome,'@sem_email')), COALESCE(p_ativo,TRUE))
+    ON CONFLICT (numero) DO UPDATE SET nome = p_nome, email = CONCAT(p_nome,'@sem_email'), ativo = COALESCE(p_ativo,TRUE);
+    
+    RETURN TRUE;
+END; $$;
+
+-- !!! DESAFIO
+-- ALTERAR A FUNÇÃO RECÉM CRIADA PARA CADASTRAR CLIENTES COM SUA CONTA CORRENTE
+-- A ESTRUTURA DA FUNÇÃO JÁ ESTÁ ABAIXO
+-- PRIMEIRO TEMOS QUE APAGAR A FUNÇÃO, POIS A MESMA JÁ EXISTE COM PARÂMETROS DIFERENTES
+
+DROP FUNCTION cliente_manage(p_numero INTEGER, p_nome VARCHAR(120), p_email VARCHAR(250), p_ativo BOOLEAN);
+
+-- AGORA DEVEMOS RECRIAR A FUNÇÃO CONTEMPLANDO TODAS AS VARIÁVEIS POSSÍVEIS
+-- NÃO ESQUEÇA DE QUE É IMPORTANTE ATUALIZAR ALGUNS CAMPOS CASO O CLIENTE JÁ EXISTA
+CREATE OR REPLACE FUNCTION cliente_manage(
+    p_banco_numero INTEGER,
+    p_agencia_numero INTEGER,
+    p_cliente_numero INTEGER,
+    p_cliente_nome VARCHAR(120),
+    p_cliente_email VARCHAR(250),
+    p_cliente_ativo BOOLEAN,
+    p_conta_corrente_numero BIGINT,
+    p_conta_corrente_digito SMALLINT,
+    p_conta_corrente_ativo BOOLEAN
+)
+RETURNS TABLE (
+    banco_nome VARCHAR,
+    agencia_nome VARCHAR,
+    cliente_nome VARCHAR,
+    conta_corrente_numero BIGINT,
+    conta_corrente_digito SMALLINT
+)
+LANGUAGE PLPGSQL
+SECURITY DEFINER
+RETURNS NULL ON NULL INPUT
+AS $$
+BEGIN
+    -- SEU CÓDIGO AQUI
+END; $$;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

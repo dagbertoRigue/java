@@ -51,14 +51,14 @@ UPDATE banco SET ativo = false WHERE numero = 0;
 SELECT numero, nome, ativo FROM banco WHERE numero = 0;
 
 BEGIN;
-UPDATE banco SET ativo = true WHERE numero = 0;
-SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- UPDATE para ativo = true
+	UPDATE banco SET ativo = true WHERE numero = 0;
+	SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- UPDATE para ativo = true
 COMMIT; 
 SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- COMMIT para ativo = true
 
 BEGIN;
-UPDATE banco SET ativo = true WHERE numero = 0;
-SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- UPDATE para ativo = true
+	UPDATE banco SET ativo = true WHERE numero = 0;
+	SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- UPDATE para ativo = true
 ROLLBACK;                                               
 SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- ROLLBACK devolve para false
 

@@ -1,0 +1,66 @@
+Transações
+
+Definição : 
+Conceito fundamental de todos os sistemas de bancos de dados.
+Conceito de múltiplas etapas/códigos reunidos em apenas 1 transação, onde o resultado precisa se tudo ou nada.
+
+Exemplos :
+
+UPDATE conta SET valor = valor - 100.00 WHERE nome = 'Alice';
+UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Carlos';
+
+O conceito de transações existe para mitigar um possível erro no exemplo acima.
+Caso o valor subtraído da conta da Alice ocorra e não execute o update na conta do Carlos, esse valor desaparece.
+
+BEGIN;
+	UPDATE conta SET valor = valor - 100.00 WHERE nome = 'Alice';
+	UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Carlos';
+COMMIT;
+
+Dessa forma, caso uma execução não ocorra, haverá um rollback nas transações anteriores e o dado não se perde.
+
+-------------------------------------------------------------------------------------------------------
+Para desfazer a transação, podemos forçar o ROLLBACK :
+
+BEGIN;
+	UPDATE conta SET valor = valor - 100.00 WHERE nome = 'Alice';
+	UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Carlos';
+ROLLABACK;
+
+--------------------------------------------------------------------------------------------------------
+Pode-se ainda usar o conceito de SAVEPOINT, onde é possivel retornar a trasação caso exista um erro no meio do percurso :
+
+BEGIN;
+	UPDATE conta SET valor = valor - 100.00 WHERE nome = 'Alice';
+
+SAVEPOINT my_savepoint;
+
+	UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Carlos';
+	-- oops... não é para o Carlos, é para o Pedro!
+ROLLABACK TO my_savepoint;
+	UPDATE conta SET valor = valor + 100.00 WHERE nome = 'Pedro';
+
+COMMIT;
+
+---------------------------------------------------------------------------------------------------------
+-- Prática :
+
+SELECT numero, nome, ativo FROM banco ORDER BY numero;
+
+UPDATE banco SET ativo = false WHERE numero = 0;
+SELECT numero, nome, ativo FROM banco WHERE numero = 0;
+
+BEGIN;
+UPDATE banco SET ativo = true WHERE numero = 0;
+SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- UPDATE para ativo = true
+COMMIT; 
+SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- COMMIT para ativo = true
+
+BEGIN;
+UPDATE banco SET ativo = true WHERE numero = 0;
+SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- UPDATE para ativo = true
+ROLLBACK;                                               
+SELECT numero, nome, ativo FROM banco WHERE numero = 0; -- ROLLBACK devolve para false
+
+
+

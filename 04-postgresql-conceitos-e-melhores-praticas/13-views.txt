@@ -1,0 +1,183 @@
+Views
+
+Views são visões, 'camadas' para as tabelas. São alias para uma ou mais queries.
+Aceitam comandos de SELECT, INSERT, UPDATE e DELETE.
+Somente as views que fazem referencia a apenas uma tabela aceitem INSERT, UPDATE e DELETE.
+Caso possua JOINs, na View, por exemplo, apenas o SELECT vai funcionar.
+
+-------------------------------------------------------------------------------------------
+Para criar uma View :
+
+CREATE [OR REPLACE] [TEMP | TEMPORARY] [RECURSIVE] VIEW name [(column_name[,...])]
+   [with (view_option_name [= view_option_value] [,...])]
+   AS query
+   [WITH [CASCADED | LOCAL] CHECK OPTION]
+
+-------------------------------------------------------------------------------------------
+Idempotência :
+
+CREATE OR REPLACE VIEW vw_bancos AS(
+   SELECT numero, nome, ativo
+);
+
+SELECT numero, nome, ativo FROM vw_bancos;
+
+CREATE OR REPLACE VIEW vw_bancos (banco_numero, banco_nome, banco_ativo) AS (
+   SELECT numero, nome, ativo
+   FROM banco
+);
+
+SELECT OR REPLACE VIEW vw_bancos (banco_numero, banco_nome, banco_ativo) AS (
+   SELECT numero, nome, ativo FROM banco
+);
+
+SELECT banco_numero, banco_nome, banco_ativo FROM vw_bancos;
+
+Obs1.: Não referenciamos dataType para views.
+
+
+-------------------------------------------------------------------------------------------
+INSERT, UPDATE e DELETE - Funcionam apenas para VIEWs com apenas 1 tabela:
+
+CREATE OR REPLACE VIEW vw_bancos AS(
+   SELECT numero, nome, ativo FROM banco
+);
+
+SELECT numero, nome, ativo FROM vw_bancos;
+
+INSERT INTO vw_bancos (numero, nome, ativo) VALUES (100, 'BANCO CEM', TRUE);
+UPDATE vw_bancos SET nome = 'Banco 100' WHERE numero = 100
+DELETE FROM vw_bancos WHERE numero = 100;
+
+
+-------------------------------------------------------------------------------------------
+TEMPORARY
+Tipo de View que funciona apenas na sessão do usuário ou na seção ativa da máquina que a possue.
+Caso a sessão seja desconectada e conectada novamente, a VIEW não estará disponível.
+
+CREATE OR REPLACE TEMPORARY VIEW vw_bancos AS (
+   SELECT numero, nome, ativo FROM banco
+);
+
+SELECT numero, nome, ativo FROM vw_bancos;
+
+
+-------------------------------------------------------------------------------------------
+RECURSIVE.
+A VIEW recursiva é uma VIEW que o comando no inteiror dela vai chamar ela mesma, 
+fazendo com que ela entre em looping.
+Obrigatório a existência dos campos da VIEW e o uso de UNION ALL.
+
+CREATE OR REPLACE RECURSIVE VIEW (nome_da_view)(campos_da_view) AS (
+   SELECT base UNION ALL
+   SELECT campos FROM tabela_base
+   JOIN (nome_da_view)
+);
+
+Exemplo :
+
+CREATE TABLE IF NOT EXISTS funcionarios (
+   id SERIA NOT NULL,
+   nome VARCHAR(50),
+   gerente INTEGER,
+   PRIMARY KEY (id),
+   FOREYGN KEY (gerente) REFERENCES funcionarios (id)
+);
+
+INSERT INTO funcionarios (nome, gerente) VALUES ('Ancelmo', null);
+INSERT INTO funcionarios (nome, gerente) VALUES ('Beatriz', 1);
+INSERT INTO funcionarios (nome, gerente) VALUES ('Magno', 1);
+INSERT INTO funcionarios (nome, gerente) VALUES ('Cremilda', 2);
+INSERT INTO funcionarios (nome, gerente) VALUES ('Wagner', 4);
+
+Nesse exemplo, Ancelmo receberá o id 1, o que significa que 'Beatriz' e 'Magno' respondem à Ancelmo.
+
+CREATE OR REPLACE RECURSIVE VIEW vw_funcionarios (id, gerente, funcionario) AS (
+   SELECT id, gerente, nome FROM funcionarios WHERE gerente IS NULL
+   UNION ALL
+   SELECT funcionarios.id, funcionarios.gerente, funcionarios.nome FROM funcionarios
+   JOIN vw_funcionarios ON vw_funcionarios.id = funcionarios.id
+   JOIN funcionarios gerentes ON gerentes.id = vw_funcionarios.id
+);
+SELECT id, gerente, funcionario FROM vw_funcionarios
+
+
+-------------------------------------------------------------------------------------------
+WITH OPTIONS
+
+CREATE OR REPLACE VIEW vw_bancos AS (
+   SELECT numero, nome, ativo FROM banco
+);
+INSERT INTO vw_bancos (numero, nome, ativo) VALUES (100, 'Banco CEM', FALSE)
+-- OK
+
+CREATE OR REPLACE VIEW vw_bancos AS (
+   SELECT numero, nome, ativo FROM banco WHERE ativo IS TRUE
+) WITH LOCAL CHECK OPTION;
+
+
+INSERT INTO vw_bancos (numero, nome, ativo) VALUES (100, 'Banco CEM', FALSE)
+-- ERRO porque a VIEW exige que o campo ativo seja TRUE
+
+O 'WITH CASCADED CHECK OPTION' funciona de maneira similar.
+A diferença existe quando temos mais de uma view, pois a verificação ocorre em todas as views que antecedem.
+Por isso o termo 'cascaded', a verificação é feita em cascata.
+
+-- ------------------------------------------------------------------------------------------------------------
+-- Prática :
+
+CREATE OR REPLACE VIEW vw_bancos AS(
+	SELECT numero, nome, ativo FROM banco
+);
+
+SELECT numero, nome, ativo FROM vw_bancos;
+
+CREATE OR REPLACE VIEW vw_bancos_2 (banco_numero, banco_nome, banco_ativo) AS (
+	SELECT numero, nome, ativo FROM banco
+);
+
+SELECT banco_numero, banco_nome, banco_ativo FROM vw_bancos_2;
+
+INSERT INTO vw_bancos_2 (banco_numero, banco_nome, banco_ativo)
+	VALUES (51, 'Banco Boa Ideia', TRUE);
+SELECT banco_numero, banco_nome, banco_ativo FROM vw_bancos_2 WHERE banco_numero = 51;
+SELECT numero, nome, ativo FROM banco WHERE numero = 51;
+
+UPDATE vw_bancos_2 SET banco_ativo = FALSE WHERE banco_numero = 51;
+SELECT numero, nome, ativo FROM banco WHERE numero = 51;
+
+DELETE FROM vw_bancos_2 WHERE banco_numero = 51;
+SELECT numero, nome, ativo FROM banco WHERE numero = 51;
+
+-- ---------------------------------------------------------------------------------------------
+-- WITH OPTIONS :
+
+CREATE OR REPLACE VIEW vw_bancos_ativos AS (
+	SELECT numero, nome, ativo FROM banco WHERE ativo IS TRUE
+) WITH LOCAL CHECK OPTION;
+
+INSERT INTO vw_bancos_ativos (numero, nme, ativO) VALUES (51, 'Banco Boa Ideia', FALSE);
+/*
+** ERROR:  column "nme" of relation "vw_bancos_ativos" does not exist
+** LINE 1: INSERT INTO vw_bancos_ativos (numero, nme, ativO) VALUES (51...
+**                                               ^
+** SQL state: 42703
+** Character: 39
+*/
+
+CREATE OR REPLACE VIEW vw_bancos_com_a AS (
+	SELECT numero, nome, ativo FROM vw_bancos_ativos
+	WHERE nome ILIKE 'A%'
+) WITH LOCAL CHECK OPTION;
+
+SELECT numero, nome, ativo FROM vw_bancos_com_a;
+
+INSERT INTO vw_bancos_com_a (numero, nome, ativo) VALUES (333, 'Beta Bank', TRUE);
+/*
+** ERROR:  new row violates check option for view "vw_bancos_com_a"
+** DETAIL:  Failing row contains (333, Beta Bank, t, 2021-07-16 09:46:37.055611).
+** SQL state: 44000 
+*/
+INSERT INTO vw_bancos_com_a (numero, nome, ativo) VALUES (333, 'Alfa Bank', TRUE);
+SELECT numero, nome, ativo FROM vw_bancos_com_a;
+-- OK

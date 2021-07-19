@@ -1,0 +1,16 @@
+Métodos abstratos
+Devem ser implementados por todos;
+Novos métodos quebram as implementações.
+
+Método default
+São herdados a todos que implimentam;
+Novos métodos não quebram as implementações.
+
+Herança Múltipla
+Java não possui herança múltipla.
+
+Enums
+Basicamente, é dicionários de dados imutável;
+Não é permitido criar novas instâncias;
+O construtor é sempre declarado como private;
+Por convenção, por serem objetos constantes e imutáveis (static final), os nomes são em MAIÚSCULO.

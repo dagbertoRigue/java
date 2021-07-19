@@ -1,0 +1,16 @@
+Java - Modificadores de acesso.
+
+Abstract
+Esse modificador não é aplicado nas variáveis, apenas em classes e métodos.
+Uma classe abstrata não pode ser instanciada.
+Se holver alguma declaração de um método como abstract (abstrato), a classe também deve ser marcada como abstract.
+
+Static
+É usado para a criação de uma variável que poderá ser acessada por todas as instâncias de objeto desta classe, como uma variávl comum, ou seja, a variável criada será a mesma em todas as instâncias e quando seu conteúdo é modificado numa das instâncias, a modificação ocorre em todas as demais.
+E nas declarações de métodos ajudam no acesso direto à classe.
+Portanto, não é necessário instanciar um objeto para acessar o método.
+
+Final
+Quando é aplicado na classe, não permite estender.
+No método impede que o mesmo seja sobrescrito (overrinding).
+Na subclasse e nos valores de variáveis não pode ser alterado depois que já tenha sido atribuído um valor.

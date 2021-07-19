@@ -6,7 +6,7 @@ Projetc : Maven Project - Gradle Project
 Language : Java - Kotlin - Groovy
 Spring Boot : 2.5.2
 Project Metadata
- - Group : por convenção, utiliza-se o domínio da empresa, por exemplo :  br.com.globalabs .
+ - Group : por convenção, utiliza-se o domínio da empresa, por exemplo :  br.com.globallabs .
  - Artifact : projeto que estamos trabalhando, por exemplo : exemplo-maven.
  - Name : reflete do artifact.
  - Description : descrição do projeto.
@@ -17,4 +17,41 @@ Adicionar como dependência : Spring WEB, que traz uma stack completa para desen
 
 Clicar em 'GENERATE' para baixar o projeto.
 
-Executar o mesmo processo para exemplo em Gradle. 
+Executar o mesmo processo para exemplo em Gradle.
+
+---------------------------------------------------------------------------------------------------------
+Importando os projetos exemplos para o IntelliJ
+
+Abra o IntelliJ e clique na opção 'Import project'.
+Localize a pasta do projeto, onde este foi descompactado.
+
+---------------------------------------------------------------------------------------------------------
+Estartando o projeto
+Clique na aba 'Maven Project', lado direito da tela, na lista suspensa 'Lifecicle' >> install.
+Será solicitado escolher a versão do java. Após escolher, ele gerará uma pasta, chamada 'target'.
+Cliclando na flecha, será mostrado na lista, o arquivo '.jar'.
+Clique sobre ele, e na aba 'Maven Project', na lista 'Plugins' >> spring-boot, duplo clique em 'spring-boot:run'.
+Será executado o projeto e a porta '8080' ficará dedicada para o projeto.
+No navegador, acesse' localhost:8080. 
+Aparecerá uma tela dizendo que não existe conteúdo para mostrar. (Whitelabel Error Page)
+De volta ao IntelliJ, pare o processo, clicando no botão de stop.
+De volta ao navegador, atualize a página e a mesma exibirá a mensagem que não é possível acessar a página.
+
+Primeiro teste feito.
+
+----------------------------------------------------------------------------------------------------------
+Diferenças para um projeto Gradle.
+Aba 'Maven Project' é a pasta 'Gradle'. 
+Na lista suspensa, para buildar o projeto, ao invés de 'Lifecicle' é  'Tasks' >> 'build' >> 'build'.
+A pasta 'target' gerada no Maven, recebe o nome de 'build'.
+Clicando na seta, mostrará uma lista de diretórios, e o arquivo .jar fica na pasta 'libs'.
+Clique sobre ele. Na aba 'Gradle', duplo clique em 'bootRun' na lista 'application', assim como o 'Plugin' do Maven.
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,20 @@
+Criação de Projetos
+
+Para criar projetos, acesse https://start.spring.io/
+Setar as opções, conforme necessidade do projeto.
+Projetc : Maven Project - Gradle Project
+Language : Java - Kotlin - Groovy
+Spring Boot : 2.5.2
+Project Metadata
+ - Group : por convenção, utiliza-se o domínio da empresa, por exemplo :  br.com.globalabs .
+ - Artifact : projeto que estamos trabalhando, por exemplo : exemplo-maven.
+ - Name : reflete do artifact.
+ - Description : descrição do projeto.
+ - Packaging : Jar - War
+ - Java : versão do java
+
+Adicionar como dependência : Spring WEB, que traz uma stack completa para desenvolvimento Java para web.
+
+Clicar em 'GENERATE' para baixar o projeto.
+
+Executar o mesmo processo para exemplo em Gradle. 

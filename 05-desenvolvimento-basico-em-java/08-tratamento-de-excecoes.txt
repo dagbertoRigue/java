@@ -1,0 +1,94 @@
+Exceptions
+
+Excessões são todos os erros que ocorrem durante o processamento de um método que podem ser esperados ou não esperados.
+Como o termo já diz, "Exceptions" são exceções.
+Falhas que nao devem ocorrer rotineiramente no fluxo de um sistema.
+
+"Uma exceção é um evento anormal em tempo de execução que interrompe a atividade de um sistema durante a chamada de um procedimento, podendo resultar em uma falha [13]. Tais eventos devem ser tratados para deixar o sistema em um estado no qual seja possível prosseguir."
+
+Exemplo de tratamento de exceção :
+public static void metodo() {
+	try {
+		new java.io.FileInputStream("arquivo.txt");
+	} catch (java.io.FileNotFoundException e) {
+		System.out.println("Não foi possível abrir o arquivo para leitura");
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
+Resumo do construtor :
+
+Exception() : 
+Constrói uma nova exceção com nullsua mensagem de detalhe.
+
+Exception(String message) : 
+Constrói uma nova exceção com a mensagem de detalhe especificada.
+
+Exception(String message, Throwable cause) : 
+Constrói uma nova exceção com a mensagem de detalhe especificada e a causa.
+
+(protected) Exception(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) : 
+Constrói uma nova exceção com a mensagem de detalhe especificada, causa, supressão habilitada ou desabilitada e rastreamento de pilha gravável habilitado ou desabilitado.
+
+Exception(Throwable cause) : Constrói uma nova exceção com a causa especificada e uma mensagem detalhada de (causa == null? Null: cause.toString ()) (que normalmente contém a classe e a mensagem detalhada da causa ).
+
+-------------------------------------------------------------------------------------------------------------------------------
+Exceções esperadas e não esperadas
+
+CHECKED EXCEPTIONS :
+São exceções esperadas, cujo fluxo ou método de um sistema foi preparado para receber.
+Um bom exemplo é uma exceção de negócio, onde se deseja informar um erro caso a exceção esperada ocorra.
+
+try {
+	PreparedStatement stmt = con.prepareStatement(query);
+	// ...
+} catch (SQLException e) {
+	throw new AcessoADadosException("Problema na criação do Statement", e);
+}
+UNCHECKED EXCEPTIONS
+São exceções não esperadas para o fluxo ou método de um sistema, um bom exemplo é a famosa NullPointException, que ocorre quando se tenta acessar uma referência de memória vazia, ou recuperar uma instância que não existe, dentre outros motivos.
+
+try {
+	CarroVo carro = new CarroVo;
+	carro.getPlaca();
+} catch (IntegrationException e) {
+	throw new BusinessException("Erro na criação do objeto", e);
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
+Bloco Try Catch
+O bloco try catch sempre é utilizado quando no processo que será executado dentro de um método é esperado um erro. 
+Então, cria-se um bloco "protegido" onde qualquer erro que ocorra dentreo do trecho "try" é direcionado para o trecho "catch" e sofrerá o devido tratamento de erro.
+
+-------------------------------------------------------------------------------------------------------------------------------
+Finally
+
+O finally é um bloco de código que pode ou não ser utilizado junto ao try catch, este trecho de código sempre será executado independentemente se ocorrer erro ou não dentro do fluxo onde existe o try catch.
+Normalmente, o finally é usado para liberar recursos ou para dar continuidade em um fluxo que deve ocorrer independente de erro.
+
+
+try {
+	PreparedStatement stmt = con.prepareStatement(query);
+	// ...	
+} catch (SQLException e) {
+	throw new AcessoADadosException("Problema na criação do Statement", e);	
+} finally {
+	stmt.close();
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
+Trow e Trows
+
+Trow: é usado para lançar a exceção desejada, juntamente com a mensagem de erro, para o método que fez a chamada.
+Throws: é usado para lançar a exceção desejada, juntamente com a mensagem de erro, para o método que fez a chamada.
+
+public String recuperarIdUsuario(String query) throws AcessoADadosException {
+	try {
+		PreparedStatement stmt = con.prepareStatement(query);
+		// ...	
+	} catch (SQLException e) {
+		throw new AcessoADadosException("Problema na criação do Statement", e);	
+	} finally {
+		stmt.close();
+	}
+}

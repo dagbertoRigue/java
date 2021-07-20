@@ -1,0 +1,59 @@
+Classe Data
+
+A implementação do java.util.Date está na JDK desde a versão 1.0.
+Date()
+
+Construtores descontinuados
+Date(int year, int month, int date)
+Date(int year, int month, int date, int hrs, int min, int sec)
+
+Exemplo:
+Date()
+
+import java.util.Date;
+public class ExempleDate {
+	public static void main(Strings[] args) {
+		Date newDate = new Date();
+		System.out.println(newDate);
+		// retorna : Thu Jul 08 09:55:08 BRT 2021
+	}
+}
+
+Date(long date)
+Diferete do construtor anterior, esse construtor espera que você passe os milissegundos com base padrão de tempo (epoch) que usa como referência 1 de janeiro de 1970 00:00:00 .
+
+O epoch timestamp é um padrão largamente aceito para representar uma data como um inteiro 32-bits a partir do início do Unix Epoch (1 de janeiro de 1970 00:00:00).
+
+Vamos testar com base no System.currentTimeMillis() .
+Esse método estático vai nos retornar o milissegundo mais próximo de sua execução com base no Sistema Operacional.
+
+import java.util.Date;
+public class ExempleDate {
+	public static void main(Strings[] args) {
+		Long currentTimeMillis = System.currentTimeMillis();
+		System.out.println(currentTimeMillis);
+		// retorna : 1563127311564
+
+		Date newDate = new Date(currentTimeMillis);
+		System.out.println(newDate);
+		// retorna : Sun Jul 14 15:01:51 BRT 2021
+	}
+}
+
+Métodos úteis :
+--------------------------------------------------------------------------------------------------------------------------------------
+| Método			| Retorno		| Descrição                                                                   | 
+| ------------------------------------------------------------------------------------------------------------------------------------| 
+| after(Date when)		| boolean		| Testa se esta data é posterior à data especificada.                         | 
+| before(Date when)		| boolean		| Testa se esta data é anterior à data especificada.                          | 
+| compareTo(Date anotherDate)	| int			| Compara duas datas para fazer o pedido.                                     | 
+| equals(Object obj)		| boolean		| Compara duas datas de igualdade.                                            | 
+| getTime()			| long			| Retorna o número de milissegundos desde 1º de janeiro de 1970, 00:00:00 GMT |  
+| 				| 			| representado por este objeto Date .                                         | 
+| setTime(long time)		| void			| Define este Dateobjeto para representar um ponto no tempo que é             | 
+| 				| 			| timemilissegundos após 1 de janeiro de 1970 00:00:00 GMT.                   | 
+| from(Instant instant)		| static Date		| Obtém uma instância de Datede um Instantobjeto.                             | 
+| toInstant()			| Instant		| Converte este Dateobjeto em um Instant.                                     | 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+

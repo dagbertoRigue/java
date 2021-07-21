@@ -8,18 +8,3 @@ Interfaces: É um contrato que quando assumido por uma classe deve ser implement
 Implementações ou Classes: são as materializações, a codificação das interfaces.
 Algoritmos: É uma sequência lógica, finita e definida de instruções que devem ser seguidas para resolver um problema.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

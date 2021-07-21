@@ -1,0 +1,34 @@
+Coleções com iterações ordenadas: Listas 
+
+A interface List fica dentro do pacote java.util (java.util.List).
+Características da interface List
+ - Permite elementos duplicados.
+ - Garante a ordem de inserção dos elementos na lista.
+
+Arraylist deve ser usado onde mais operações de pesquisa são necessárias
+LinkedList deve ser usado onde mais operações de inserção e exclusão são necessárias.
+
+Obs.: a remoção de elementos, por exemplo, pode ser muito custoso para ArrayList.
+                                  ---------------
+                                  |  Collection  |
+                   _____________> |<<interface>> |<__________
+                  |               ----------------           |
+                  |                                          |
+           ---------------                           ----------------          
+           |    List      |<..................   ...>|    Queue     |
+      ....>|<<interface>> |<....             .   .   |<<interface>> |<....
+      .    ----------------    .             .   .   ----------------    .
+      .                        .             .   .                       .
+      .                        .             .   .                       . 
+ ---------------    ---------------         ----------------   -----------------          
+ |  ArrayList  |    |    Vector   |         |  LinkedList  |   | PriorityQueue |
+ ---------------    ---------------         ----------------   -----------------
+
+..............> implements
+______________> extends
+
+LinkedList implementa métodos tanto da interface List, quanto da interface Queue
+
+
+
+

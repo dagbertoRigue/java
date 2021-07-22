@@ -1,0 +1,43 @@
+Map
+
+Coleções de pares : Map 
+
+A interfaceMap fica dentro do pacote java.util (java.util.Map).
+Características da interface Set
+ - NÃO extende da interface Collecion.
+ - Elementos únicos (key) para cada valor (value)
+
+Obs.:a implementação TreeSet é bastante usado quando se precisa fazer ordenação, mas não será tratado a fundo pois possui um caminho custoso, pois ele implementa a interface NavigableSet, que por sua vez extende da interface SortedSet, que extende da interface Set.
+
+                                  ---------------
+                                  |     Map      |
+                .................>|<<interface>> |<___________________
+                .                 ----------------                    |  
+                .                         .                           |                    
+                .                         .                   ----------------         
+                .                         .                   |  SortedMap   |
+                .                         .                   |<<interface>> | 
+                .                         .                   ----------------      
+                .                         .                           ^
+                .                         .                           |
+                .                         .                           |
+         ---------------           ----------------          ------------------
+         |  HashTable  |           |   HashMap    |          |  NavigableMap  |
+         ---------------           ----------------          ------------------   
+                                           ^                         ^ 
+                                           |                         .
+                                           |                         .  
+                                  ------------------         ------------------         
+                                  | LinkedHashMap  |         |    TreeMap     |
+                                  ------------------         ------------------
+
+
+
+..............> implements
+______________> extends
+
+
+Obs.: 
+ - para imprimir na ordem em que foi inserido, utilizar o LinkedHashMap.
+ - para imprimir na ordem da key, utilizar o TreeMap.
+

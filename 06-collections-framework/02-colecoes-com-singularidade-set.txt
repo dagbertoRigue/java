@@ -1,0 +1,47 @@
+Coleções com ingularidade : Set 
+
+A interface Set fica dentro do pacote java.util (java.util.Set).
+Características da interface Set
+ - NÃO permite elementos duplicados.
+ - Não possui índice. (não possui métodos get, set, indexOf)
+
+Obs.:a implementação TreeSet é bastante usado quando se precisa fazer ordenação, mas não será tratado a fundo pois possui um caminho custoso, pois ele implementa a interface NavigableSet, que por sua vez extende da interface SortedSet, que extende da interface Set.
+
+                                  ---------------
+                                  |  Collection  |
+                                  |<<interface>> |
+                                  ----------------         
+                                         ^
+                                         |                                        
+                                  ----------------         
+                                  |     Set      |
+                             ....>|<<interface>> |<____ 
+                             .    ----------------     | 
+                             .                         | 
+                             .                         |  
+                      ---------------           ----------------         
+                      |   HashSet   |           |   SortedSet  |
+                      ---------------           |<<interface>> |
+                             ^                  ----------------
+                             |                         ^ 
+                             |                         |  
+                     -------------------         ------------------         
+                     | LinkedHashSet   |         |  NavigableSet  |
+                     -------------------         | <<interface>>  |
+                                                 ------------------                  
+                                                        ^ 
+                                                        |  
+                                                 ----------------         
+                                                 |   TreeSet    |
+                                                 ----------------
+
+
+
+..............> implements
+______________> extends
+
+
+Atenção : é super importante sobrescrever os métodos equals() e hashCode(), quando estamos utilizando implementações que possuem o nome 'hash' no nome.
+No IntelliJ, basta usar Alt+Insert para pegar implementação pronta.
+
+

@@ -1,0 +1,40 @@
+Paradigma Funcional
+
+Programação funcional é o processo de construir software através de composição de funções puras, evitando compartilhamento de estados, dados mutáveis e efeitos colaterais.
+É declarativa, ao invés de imperativa.
+
+--------------------------------------------------------------------------
+Paradigma imperativo: é aquele que expressa o código através de comandos ao computador. Nele é possível ter controle de estado dos objetos.
+
+Exemplo :
+
+class Imperativo {
+	public static void main(Strings[] args) {
+		int valor = 10;
+		int resultado = valor * 3;
+		System.out.println("O resultado é :" + resultado);
+	}
+}
+
+Paradigma Funcional : damos uma regra, uma declaração de como queremos que o programa se comporte.
+
+Exemplo :
+class Funcional {
+	public static void main(Strings[] args) {
+		UnaryOperator<Integer> calcularValorVezes3 = valor -> valor*3;
+		int valor = 10;
+		int resultado = valor * 3;
+		System.out.println("O resultado é :" + resultado);
+	}
+}
+
+------------------------------------------------------------------------------
+Conceitos fundamentais da programação funcional.
+Composição de funções
+
+
+
+
+
+
+

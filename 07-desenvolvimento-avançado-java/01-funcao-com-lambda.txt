@@ -1,0 +1,5 @@
+Lambda
+
+Os lambdas obedecem o conceiro do paradigma funcional.
+Com eles, podemos facilitar legibilidade do nosso código.
+Além disso, com a nova API Funcional do Java, podemos ter uma alta produtividade para lidar com objetos.

@@ -1,5 +1,7 @@
-O Git é um sistema de controle de versionamento de código distribuído e amplamente adotado. O Git nasceu e foi tomando espaço dos outros sistemas de controle. Seu criador principal é o mesmo que o do Linux: Linus Torvalds.
-O Github tem sim muita relação com o Git. GitHub é uma plataforma para gerenciar seu código e criar um ambiente de colaboração entre devs, utilizando o Git como sistema de controle.
+O Git é um sistema de controle de versionamento de código distribuído e amplamente adotado. O Git nasceu e foi tomando espaço dos outros sistemas de controle. 
+Seu criador principal é o mesmo que o do Linux: Linus Torvalds.
+O Github tem sim muita relação com o Git. 
+GitHub é uma plataforma para gerenciar seu código e criar um ambiente de colaboração entre devs, utilizando o Git como sistema de controle.
 
 1 - Controle de versão
 2 - Armazenamento em núvem

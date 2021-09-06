@@ -1,6 +1,8 @@
 SHA1
- É um algoritmo de encriptação. A sigla SHA significa Secure Hash Algorithm (Algoritmo de Hash Seguro). É um conjunto de funções hash criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA).
- A encriptação gera um conjunto de caracteres indentificador de 40 digítos.
+É um algoritmo de encriptação. 
+A sigla SHA significa Secure Hash Algorithm (Algoritmo de Hash Seguro). 
+É um conjunto de funções hash criptográficas projetadas pela NSA (Agência de Segurança Nacional dos EUA).
+A encriptação gera um conjunto de caracteres indentificador de 40 digítos.
 Em outras palaveas, SHA1 é usado para identificar arquivos.
 
 Testando a encriptação:
@@ -41,18 +43,16 @@ O commit é o que junta todas as informações anteriores, dando sentido para as
   timestamp
 
 O SHA1 desse commit é o hash de toda essa informação.
-Se for alterado uma blob, será gerado um novo sha1. Consequentemente, a Tree desse blob também terá seu sha1 alterado, assim como o sha1 do commit.
+Se for alterado uma blob, será gerado um novo sha1. 
+Consequentemente, a Tree desse blob também terá seu sha1 alterado, assim como o sha1 do commit.
 
 SISTEMA DISTRIBUÍDO
-O GIT fornece para todos os desenvolvedores seu próprio repositório local, com todo o histórico de commits. O que traz uma série de vantagens e otimiza o seu desenvolvimento. É um sistema que possui múltiplas cópias de si mesmo em diferents locais.
+O GIT fornece para todos os desenvolvedores seu próprio repositório local, com todo o histórico de commits. 
+O que traz uma série de vantagens e otimiza o seu desenvolvimento. 
+É um sistema que possui múltiplas cópias de si mesmo em diferents locais.
 
 Segurança
-Pelo fato da impossibilidade de alteração do commit, torna o sistema confiável, devido a estrutura como o GIT foi criada. É seguro porque seus objetos estão ligados de maneira encadeada e de difícil alteração.
-
-
-
-
-
-
+Pelo fato da impossibilidade de alteração do commit, torna o sistema confiável, devido a estrutura como o GIT foi criada. 
+É seguro porque seus objetos estão ligados de maneira encadeada e de difícil alteração.
 
 

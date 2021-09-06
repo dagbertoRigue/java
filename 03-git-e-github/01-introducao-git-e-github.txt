@@ -29,19 +29,3 @@ Deletar todo conteúdo de um diretório: del nomeDoDiretorio
 Deletar um diretório (remove directory): rmdir nomeDoDiretorio /s /q
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

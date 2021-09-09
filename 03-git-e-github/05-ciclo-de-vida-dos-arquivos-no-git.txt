@@ -1,6 +1,7 @@
 Ciclo de vida dos arquivos no Git
 
-Obs.: o termo diretório é usado quando tratamos das pastas no desktop. Assim que inicia-se o versionamento no Git, a terminologia correta muda para repositório.
+Obs.: o termo diretório é usado quando tratamos das pastas no desktop. 
+Assim que inicia-se o versionamento no Git, a terminologia correta muda para repositório.
 
 Tracked ou Untracked
 Untracked é tudo que ainda não foi adicionado ao Git.
@@ -26,7 +27,8 @@ Working Directory para Staging Area - Adicionar arquivo ou "stage" arquivo.
 Staging Area para Local Repository - Commit
 Para verificar o status dos aquivos : git status
 
-O Git é um sistema distribuído e para mover o conteúdo, do ambiente de desenvolvimento, para o servidor é necessário um conjunto de comandos específicos, empurrando para o servidor.
+O Git é um sistema distribuído e para mover o conteúdo, do ambiente de desenvolvimento, para o servidor é necessário um conjunto de comandos específicos, 
+empurrando para o servidor.
 
 Melhorando e avançando com o projeto Receitas
 1. Adicionar uma diretório "receitas" : mkdir receitas

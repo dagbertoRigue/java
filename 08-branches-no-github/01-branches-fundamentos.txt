@@ -1,0 +1,24 @@
+Branch 
+
+Os branches permitem que você desenvolva recursos, corrija erros ou experimente com segurança novas ideias em uma área contida do seu repositório.
+Você sempre cria um branch a partir de um branch existente. 
+Normalmente, você pode criar um novo branch a partir do branch-padrão do seu repositório. 
+Você então poderá trabalhar nesse novo branch isolado das mudanças que outras pessoas estão fazendo no repositório. 
+Um branch que você cria para produzir um recurso é comumente referido como um branch de recurso ou branch de tópico.
+
+Funcionalidade :
+Use um branch para isolar o trabalho de desenvolvimento sem afetar outros branches no repositório. 
+Cada repositório tem um branch padrão e pode ter vários outros branches. 
+Você pode fazer merge de um branch em outro branch usando uma pull request.
+
+Sobre o branch-padrão :
+Ao criar um repositório com conteúdo em GitHub, GitHub cria o repositório com um único branch. 
+Este primeiro branch no repositório é o branch-padrão. 
+O branch-padrão é o branch que GitHub exibe quando alguém visita o seu repositório. 
+O branch padrão é também o branch inicial que o Git verifica localmente quando alguém clona o repositório. 
+A menos que você especifique um branch diferente, o branch-padrão em um repositório é o branch de base 
+para novos pull requests e commits de código.
+Por padrão, GitHub nomeia o branch padrão principal em qualquer novo repositório.
+
+
+

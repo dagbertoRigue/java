@@ -4,7 +4,7 @@ Primeiros comandos com o GIT
  - Iniciar o versionamento : git add
  - Criar um commit : git commit
 
-Obs1.: Ao utilizar um CLI, deve-se utilizar o nome do programa no começo de cada comando e após, o comando propriamente dito.
+Obs1.: Ao utilizar um CLI (Comand Line Interface), deve-se utilizar o nome do programa no começo de cada comando e após, o comando propriamente dito.
 Obs2.: todos os comandos utilizados no cmd, no 01-introducao-git-e-github são utilizáveis no Git Bash.
 
 Criando um repositório :
@@ -16,7 +16,8 @@ Criando um repositório :
 
 4. Iniciar o git dentro da pasta, para que o git comece de fato a gerenciar o versionamento desse projeto : git init
 A resposta foi : Initialized empty Git repository in C:/workspace/livro-receitas/.git/
-Apesar da resposta dizer que foi inicializado um repositorio vazio, ela mostra uma pasta chamada .git e mesmo que se tente mostrar essa pasta listando com o comando dir, ela não vai aparecer, porque ela é oculta.
+Apesar da resposta dizer que foi inicializado um repositorio vazio, ela mostra uma pasta chamada .git 
+e mesmo que se tente mostrar essa pasta listando com o comando dir, ela não vai aparecer, porque ela é oculta.
 Para listar pastas ocultas, é preciso adicionar a flag -a : dir -a
 
 5. Realizar as configurações iniciais
@@ -39,14 +40,5 @@ Obs.: esse código 83a6587 é o começo do sha1.
 Observações finais:
 md: um arquivo que usa caracteres especiais como # para formatar o texto
 git commit - estrutura do git responsável por adicionar uma mensagem as nossas alterações.
-
-
-
-
-
-
-
-
-
 
 

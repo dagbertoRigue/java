@@ -1,0 +1,50 @@
+Para efeitos de teste, criar um repositório no Github.
+Após criá-lo, copie a url para clonar, via Git Bash.
+
+Foi usado o repositório de testes "https://github.com/dagbertoRigue/livro-receitas".
+
+1. Criar uma pasta no computador para clonar esse repositório.
+2. Dentro da pasta, com o botão direito, clique em "Git Bash Here", na lista suspensa.
+3. Execute : git clone https://github.com/dagbertoRigue/livro-receitas
+4. Acesse o repositório : cd livro-receitas
+
+Agora, com o clone do repositório, crie um arquivo para iniciar os testes.
+
+5. Criar arquivo : echo > arquivo1.txt
+6. Verifique o status do arquivo : git status
+
+A resposta foi : 
+"
+dsr@SCW7P8951 MINGW32 ~/Documents/Rigue/uparGitHub/Testes e clones/livro-receitas (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dsr@SCW7P8951 MINGW32 ~/Documents/Rigue/uparGitHub/Testes e clones/livro-receitas (master)
+$
+"
+O status é mostrado como "untracked" e inclusive, o Git Bash faz uma sugetão para usar o "git add" para incluir no que vai ser commitado.
+
+7. Execute o "git add" para mover o status de untracked para staged : git add *
+(o asterisco (*) representa o index)
+
+Pode-se executar o "git status" novamente para observar a mudança para staged e a sugestão de usar o "git restore" para retornar o status para untracked.
+Próximo passo, fazer o commit do arquivo.
+
+8.Executar o commit : git commit -m "adiciona arquivo 1 na branch master"
+
+Observação : com a alteração do Github, na preferência em utilizar o nome "main" ao invés de "master", e
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 --------------------------------------------------------------------
-Linux - IntroduÁ„o ao sistema operacional
+Linux - Introdu√ß√£o ao sistema operacional
 
 1.
 https://www.youtube.com/embed/bGZuZCAZJ9o?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -215,7 +215,7 @@ https://www.youtube.com/embed/m6CpTpByMm8?controls=0&autoplay=1&disablekb=1&enab
 
 
 ------------------------------------------------------------------------
-Arquitetura de Sistemas AvanÁado
+Arquitetura de Sistemas Avan√ßado
 
 1.
 https://www.youtube.com/embed/5OkBarR4DXg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -254,7 +254,7 @@ https://www.youtube.com/embed/HhcOuJBxt_0?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/lmuBGWbGAHA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 -----------------------------------------------------------------------
-IndroduÁ„o a orquestraÁ„o de contÍineres com Docker
+Indrodu√ß√£o a orquestra√ß√£o de cont√™ineres com Docker
 
 1.
 https://www.youtube.com/embed/qew0Q_S6vCk?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -312,7 +312,7 @@ https://github.com/luistkd4/docker101
 
 
 -----------------------------------------------------------------------
-Conceitos e melhores pr·ticas com banco de dados PostgreSQL
+Conceitos e melhores pr√°ticas com banco de dados PostgreSQL
 
 1.
 https://www.youtube.com/embed/SKVwEYs1e9c?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -361,7 +361,7 @@ https://www.youtube.com/embed/1aIbpCYiDRg?controls=0&autoplay=1&disablekb=1&enab
 
 
 ------------------------------------------------------------------------
-IntroduÁ„o ao MongoDB e Bancos de Dados NoSQL
+Introdu√ß√£o ao MongoDB e Bancos de Dados NoSQL
 
 1.
 https://www.youtube.com/embed/AQjaZ-ey4bY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -468,7 +468,7 @@ https://drive.google.com/file/d/1nfzVpbwwB8d99RY8BEvjaQJ-vYx6o56X/view?usp=shari
 
 
 ----------------------------------------------------------------------------------
-IntroduÁ„o ‡ programaÁ„o com Python
+Introdu√ß√£o √† programa√ß√£o com Python
 
 1.
 https://www.youtube.com/embed/KZ6w5_CViP8?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -506,10 +506,213 @@ https://www.youtube.com/embed/KoCz2L23JLw?controls=0&autoplay=1&disablekb=1&enab
 12.
 https://www.youtube.com/embed/gUZ8tZjeLNU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
----------------------------------------------------------------------------
+-----------------------------------------------------------------------
+Fundamentos de ETL com Python
+
+1.
+https://www.youtube.com/embed/Q89NrTQu-u8?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+2.
+https://www.youtube.com/embed/tQeWK_OALrg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+3.
+https://www.youtube.com/embed/Dp6MLT0lwdw?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+4.
+https://www.youtube.com/embed/JyYzHL6O5wA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+5.
+https://www.youtube.com/embed/PiKUjgIFHi4?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+6.
+https://www.youtube.com/embed/EAzL-wEsyzM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+7.
+https://www.youtube.com/embed/IIbGMGzsf-o?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+8.
+https://www.youtube.com/embed/EfCdDaq56qQ?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+9.
+https://www.youtube.com/embed/H0SW-xJR3j0?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+10.
+https://www.youtube.com/embed/p50vR5duWCM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+11.
+https://www.youtube.com/embed/MOOTl3mryfg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+12.
+https://www.youtube.com/embed/D4jfN7xjVts?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+13.
+https://www.youtube.com/embed/hyJhMuWnQoU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+14.
+https://www.youtube.com/embed/RT29Zsgu1OU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+15.
+https://www.youtube.com/embed/lTvmNqjp2Yo?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+16.
+https://www.youtube.com/embed/TdsKSPGJaIA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+17.
+https://www.youtube.com/embed/KtCUrJ6GnWw?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+18.
+https://www.youtube.com/embed/5H3Y-sw3lhY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+19.
+https://www.youtube.com/embed/oZ5ZFvfANTg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+20.
+https://www.youtube.com/embed/_yE0BBFx57Q?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+21.
+https://www.youtube.com/embed/yhAZCRLYsqY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+22.
+https://www.youtube.com/embed/qd6o-6cJ5nA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+23.
+https://www.youtube.com/embed/wu8zerHJt2c?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+24.
+https://www.youtube.com/embed/ifDE2eFPCRQ?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+25.
+https://www.youtube.com/embed/yGOCJ6B_cD0?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+26.
+https://www.youtube.com/embed/4FUiEOVxLzk?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+27.
+https://www.youtube.com/embed/TfzB6kpw_TA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+28.
+https://www.youtube.com/embed/1ZN0Wmab_vU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+29.
+https://www.youtube.com/embed/YwfYif5en5w?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+30.
+https://www.youtube.com/embed/alHzXWyWsTs?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+31.
+https://www.youtube.com/embed/H8DMDQ37yB4?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+32.
+https://www.youtube.com/embed/A_JoOU5Cxic?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+33.
+https://www.youtube.com/embed/DKy-jHGlpwQ?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+34.
+https://www.youtube.com/embed/EItpBdXxPhQ?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+35.
+https://www.youtube.com/embed/zFtUVwKh08I?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+36.
+https://www.youtube.com/embed/7t8sjAoH9GM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+37.
+https://www.youtube.com/embed/phpbujSM9DY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+38.
+https://www.youtube.com/embed/DN_VOchrFqw?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+39.
+https://www.youtube.com/embed/O-ayM4hHSLA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+40.
+https://www.youtube.com/embed/9E4IZL5Zs90?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+41.
+https://www.youtube.com/embed/Xd3WRNnsERg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+42.
+https://www.youtube.com/embed/0nQNNwxYAuk?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+43.
+https://drive.google.com/drive/folders/1ldrsSLnFUG0Cf2JLYsI1IHn5gU5MxrJw?usp=sharing
+
+44.
+https://github.com/ftiosso/dio-curso-etl
+
+---------------------------------------------------------
+An√°lise de dados com Python e Pandas
+
+1.
+https://www.youtube.com/embed/VYUt2riN3Ss?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+2.
+https://www.youtube.com/embed/gXeIAeJI92Y?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+3.
+https://www.youtube.com/embed/4HyMbFtCrC0?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+4.
+https://www.youtube.com/embed/pUH9NEcuE_o?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+5.
+https://www.youtube.com/embed/6yFTtc1-sFg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+6.
+https://www.youtube.com/embed/6JHX7cE9qmk?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+7.
+https://www.youtube.com/embed/9X3SHZhpOB4?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+8.
+https://www.youtube.com/embed/zfwRFiRgEQE?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+9.
+https://www.youtube.com/embed/OwZwYypQ7kM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+---------------------------------------------------------
+Monitoramento de clusters Hadoop de alto n√≠vel com HDFS e YARN
+
+1.
 
 
+2.
 
+
+3.
+
+
+4.
+
+
+5.
+
+
+6.
+
+
+7.
+
+
+8.
+
+9.
+
+
+10.
+
+
+11.
+
+
+12.
+
+
+13.
+
+
+14.
 
 
 

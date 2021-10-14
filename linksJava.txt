@@ -1220,7 +1220,7 @@ https://www.youtube.com/embed/o0L5a3XL-78?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/Jb5NmSUazCY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 16.
-src="https://www.youtube.com/embed/qDzC-unCy_M?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1"
+https://www.youtube.com/embed/qDzC-unCy_M?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 17.
 https://www.youtube.com/embed/6w5m5342h0Y?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -1275,7 +1275,7 @@ https://www.youtube.com/embed/Dg8gVuOpuJ0?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/X8g_j0NA8Qg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 3.
-src="https://www.youtube.com/embed/dP1XyU73nk4?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1"
+https://www.youtube.com/embed/dP1XyU73nk4?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 4.
 https://www.youtube.com/embed/DAS1fT6hL7o?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -1370,6 +1370,9 @@ https://www.youtube.com/embed/aD9a1TKy7S8?controls=0&autoplay=1&disablekb=1&enab
 
 16.
 https://www.youtube.com/embed/UhkJI7DgoXE?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+17.
+Link do Repositório do Projeto: https://github.com/JGhignatti/jv-weather
 
 
 --------------------------------------------------------------

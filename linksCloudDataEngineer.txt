@@ -1,5 +1,5 @@
 --------------------------------------------------------------------
-Linux - Introdução ao sistema operacional
+Linux - IntroduÃ§Ã£o ao sistema operacional
 
 1.
 https://www.youtube.com/embed/bGZuZCAZJ9o?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -215,7 +215,7 @@ https://www.youtube.com/embed/m6CpTpByMm8?controls=0&autoplay=1&disablekb=1&enab
 
 
 ------------------------------------------------------------------------
-Arquitetura de Sistemas Avançado
+Arquitetura de Sistemas AvanÃ§ado
 
 1.
 https://www.youtube.com/embed/5OkBarR4DXg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -254,7 +254,7 @@ https://www.youtube.com/embed/HhcOuJBxt_0?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/lmuBGWbGAHA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 -----------------------------------------------------------------------
-Indrodução a orquestração de contêineres com Docker
+IndroduÃ§Ã£o a orquestraÃ§Ã£o de contÃªineres com Docker
 
 1.
 https://www.youtube.com/embed/qew0Q_S6vCk?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -312,7 +312,7 @@ https://github.com/luistkd4/docker101
 
 
 -----------------------------------------------------------------------
-Conceitos e melhores práticas com banco de dados PostgreSQL
+Conceitos e melhores prÃ¡ticas com banco de dados PostgreSQL
 
 1.
 https://www.youtube.com/embed/SKVwEYs1e9c?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -361,7 +361,7 @@ https://www.youtube.com/embed/1aIbpCYiDRg?controls=0&autoplay=1&disablekb=1&enab
 
 
 ------------------------------------------------------------------------
-Introdução ao MongoDB e Bancos de Dados NoSQL
+IntroduÃ§Ã£o ao MongoDB e Bancos de Dados NoSQL
 
 1.
 https://www.youtube.com/embed/AQjaZ-ey4bY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -468,7 +468,7 @@ https://drive.google.com/file/d/1nfzVpbwwB8d99RY8BEvjaQJ-vYx6o56X/view?usp=shari
 
 
 ----------------------------------------------------------------------------------
-Introdução à programação com Python
+IntroduÃ§Ã£o Ã  programaÃ§Ã£o com Python
 
 1.
 https://www.youtube.com/embed/KZ6w5_CViP8?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -642,7 +642,7 @@ https://drive.google.com/drive/folders/1ldrsSLnFUG0Cf2JLYsI1IHn5gU5MxrJw?usp=sha
 https://github.com/ftiosso/dio-curso-etl
 
 ---------------------------------------------------------
-Análise de dados com Python e Pandas
+AnÃ¡lise de dados com Python e Pandas
 
 1.
 https://www.youtube.com/embed/VYUt2riN3Ss?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -672,7 +672,7 @@ https://www.youtube.com/embed/zfwRFiRgEQE?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/OwZwYypQ7kM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 ---------------------------------------------------------
-Monitoramento de clusters Hadoop de alto nível com HDFS e YARN
+Monitoramento de clusters Hadoop de alto nÃ­vel com HDFS e YARN
 
 1.
 https://www.youtube.com/embed/NpsZJYlTstA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -696,7 +696,7 @@ https://www.youtube.com/embed/YIBk5T7Xe9s?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/PxmwvHDBdv4?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 8.
-Este curso tem como material complementar uma Máquina Virtual (VM) preparada com as principais ferramentas e configurações para o acompanhamento das atividades práticas.
+Este curso tem como material complementar uma MÃ¡quina Virtual (VM) preparada com as principais ferramentas e configuraÃ§Ãµes para o acompanhamento das atividades prÃ¡ticas.
 Nesse sentido, a VM pode ser obtida pelo seguinte link:
 https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
 
@@ -720,7 +720,7 @@ https://drive.google.com/file/d/1mSzcFASKCTir5ecdRNA7hHb7DoVfOMM0/view
 
 
 -------------------------------------------------------------------------
-Orquestrando ambientes de Big Data distribuídos com Zookeeper, Yarn e Sqooq
+Orquestrando ambientes de Big Data distribuÃ­dos com Zookeeper, Yarn e Sqooq
 
 1.
 https://www.youtube.com/embed/s1DPBk48Toc?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -732,7 +732,7 @@ https://www.youtube.com/embed/_QyZkOXzdQU?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/UftGGdrOvFE?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 4.
-Este curso tem como material complementar uma Máquina Virtual (VM) preparada com as principais ferramentas e configurações para o acompanhamento das atividades práticas.
+Este curso tem como material complementar uma MÃ¡quina Virtual (VM) preparada com as principais ferramentas e configuraÃ§Ãµes para o acompanhamento das atividades prÃ¡ticas.
 Nesse sentido, a VM pode ser obtida pelo seguinte link:
 
 https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
@@ -799,7 +799,7 @@ https://www.youtube.com/embed/dGUdLAIYzj0?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/1NpAooprRxA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 11.
-Este curso tem como material complementar uma Máquina Virtual (VM) preparada com as principais ferramentas e configurações para o acompanhamento das atividades práticas.
+Este curso tem como material complementar uma MÃ¡quina Virtual (VM) preparada com as principais ferramentas e configuraÃ§Ãµes para o acompanhamento das atividades prÃ¡ticas.
 Nesse sentido, a VM pode ser obtida pelo seguinte link:
 https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
 
@@ -810,7 +810,7 @@ https://gitlab.com/vmb1/hive
 https://drive.google.com/file/d/1duwf7g9lfAsIOJWRL26tx8RBfV8ySPon/view
 
 ----------------------------------------------------------------------
-Processando grandes conjuntos de dados de forma paralela e distribuída com Spark
+Processando grandes conjuntos de dados de forma paralela e distribuÃ­da com Spark
 
 1.
 https://www.youtube.com/embed/Nhprf15xmaM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -834,7 +834,7 @@ https://www.youtube.com/embed/bXVXUCt-v7E?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/MpN_XB1AvKU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 8.
-Este curso tem como material complementar uma Máquina Virtual (VM) preparada com as principais ferramentas e configurações para o acompanhamento das atividades práticas.Nesse sentido, a VM pode ser obtida pelo seguinte link:
+Este curso tem como material complementar uma MÃ¡quina Virtual (VM) preparada com as principais ferramentas e configuraÃ§Ãµes para o acompanhamento das atividades prÃ¡ticas.Nesse sentido, a VM pode ser obtida pelo seguinte link:
 https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
 
 9.
@@ -889,7 +889,7 @@ https://www.youtube.com/embed/l5gPSqc-Jls?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/dlug3hzD6As?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 8.
-Este curso tem como material complementar uma Máquina Virtual (VM) preparada com as principais ferramentas e configurações para o acompanhamento das atividades práticas.Nesse sentido, a VM pode ser obtida pelo seguinte link:
+Este curso tem como material complementar uma MÃ¡quina Virtual (VM) preparada com as principais ferramentas e configuraÃ§Ãµes para o acompanhamento das atividades prÃ¡ticas.Nesse sentido, a VM pode ser obtida pelo seguinte link:
 https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
 
 9.
@@ -947,7 +947,7 @@ https://www.youtube.com/embed/8DE38mpCjpE?controls=0&autoplay=1&disablekb=1&enab
 https://drive.google.com/file/d/1Hl7NaISZ8_u8es8q5cK2U6VZ_mzNbD35/view?usp=sharing
 
 ------------------------------------------------------------------------------------
-Introdução a Engenharia de Dados na AWS
+IntroduÃ§Ã£o a Engenharia de Dados na AWS
 
 1.
 https://www.youtube.com/embed/VhC9lwbOt_Q?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -1002,7 +1002,7 @@ https://drive.google.com/file/d/1JlfVVU1ee5f1COL9Fb2TH5_WWxzix0SU/view
 
 
 -----------------------------------------------------------------------------
-Introdução a Engenharia de Dados na Azure
+IntroduÃ§Ã£o a Engenharia de Dados na Azure
 
 1.
 https://www.youtube.com/embed/HtJouHrHPsQ?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
@@ -1134,31 +1134,91 @@ https://www.youtube.com/embed/tl048T9_fsA?controls=0&autoplay=1&disablekb=1&enab
 https://www.youtube.com/embed/KpQF4NGtutk?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
 
 16.
-Descrição do Desafio
-Sua missão será criar um ecossistema de Big Data usando o Google Cloud Platform (GCP). Para isso, o expert te ensinará a configurar o Google Cloud Dataproc, um Hadoop totalmente gerenciado, usando seus créditos gratuitos da GCP.
+DescriÃ§Ã£o do Desafio
+Sua missÃ£o serÃ¡ criar um ecossistema de Big Data usando o Google Cloud Platform (GCP). Para isso, o expert te ensinarÃ¡ a configurar o Google Cloud Dataproc, um Hadoop totalmente gerenciado, usando seus crÃ©ditos gratuitos da GCP.
 
-Agora é a sua hora de brilhar! Reproduza o projeto criado pelo expert e, opcionalmente, crie sua próprias evoluções com o objetivo de fixar ainda mais os conceitos e ferramentas/serviços da GCP.
+Agora Ã© a sua hora de brilhar! Reproduza o projeto criado pelo expert e, opcionalmente, crie sua prÃ³prias evoluÃ§Ãµes com o objetivo de fixar ainda mais os conceitos e ferramentas/serviÃ§os da GCP.
 
-Dica: Caso não tenha um cartão para cadastrar e usar seus créditos gratúitos na GCP, você pode dar um "fork" no repositório para organizar melhor as suas alterações e evoluções, mantendo uma referência direta ao código original.
+Dica: Caso nÃ£o tenha um cartÃ£o para cadastrar e usar seus crÃ©ditos gratÃºitos na GCP, vocÃª pode dar um "fork" no repositÃ³rio para organizar melhor as suas alteraÃ§Ãµes e evoluÃ§Ãµes, mantendo uma referÃªncia direta ao cÃ³digo original.
 
-Links Úteis
-Repositório no GitHub (implementação de referência)
+Links Ãšteis
+RepositÃ³rio no GitHub (implementaÃ§Ã£o de referÃªncia)
 
 -----------------------------------------------------------------------------
-Introdução à Mensageria na Nuvem com Kafka e Python
+IntroduÃ§Ã£o Ã  Mensageria na Nuvem com Kafka e Python
+
+1.
+https://www.youtube.com/embed/dkL7MFkHHps?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+2.
+https://www.youtube.com/embed/DrfOOjNw4sY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+3.
+https://www.youtube.com/embed/E0yxdfjByeg?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+4.
+https://www.youtube.com/embed/u2g83OUHgM0?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+5.
+https://www.youtube.com/embed/_cLc7plQT6c?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+6.
+https://www.youtube.com/embed/TPNe0ajcJeY?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+7.
+Este curso tem como material complementar uma MÃ¡quina Virtual (VM) preparada com as principais ferramentas e configuraÃ§Ãµes para o acompanhamento das atividades prÃ¡ticas.
+Nesse sentido, a VM pode ser obtida pelo seguinte link:
 
 
+https://drive.google.com/file/d/1CsHc311jp4EuZ8be5KGaumniGAafa8sC/view?usp=sharing
+
+8.
+https://github.com/huguinho-alves/python_aceleracao_everys
+
+9.
+https://drive.google.com/file/d/1xA3q9nWfXomygyJmlS11g-jPCXPH3Fqq/view?usp=sharing
 
 
+-----------------------------------------------------------------------------------
+Criando seu Ecossistema de Big Data na Nuvem
+
+1.
+https://www.youtube.com/embed/VYUt2riN3Ss?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+2.
+https://www.youtube.com/embed/q10ids91Pmo?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+3.
+https://www.youtube.com/embed/yqy7cNSNbSo?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+4.
+https://www.youtube.com/embed/TEccSXOn-mU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+5.
+https://www.youtube.com/embed/eFg0XUFIfvU?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+6.
+https://www.youtube.com/embed/2UHnLe8AFVs?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+7.
+https://www.youtube.com/embed/gjODPaW61V0?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+8.
+https://www.youtube.com/embed/ZROKGK4gkJQ?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+9.
+https://www.youtube.com/embed/au_TtCNxztM?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+10.
+https://www.youtube.com/embed/tE7OxNEyQLA?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+11.
+https://www.youtube.com/embed/l8UIrBUS52c?controls=0&autoplay=1&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&showinfo=0&rel=0&html5=1&cc_load_policy=1&origin=https%3A%2F%2Fweb.digitalinnovation.one&widgetid=1
+
+12.
+RepositÃ³rio no GitHub com a implementaÃ§Ã£o de referÃªncia do expert e instruÃ§Ãµes/informaÃ§Ãµes adicionais no README:
+https://github.com/cassianobrexbit/DIO-LiveCoding-AWS-BigData
 
 
-
-
-
-
-
-
-
-
-
+----------------------------------------------------------------------------------------------
 

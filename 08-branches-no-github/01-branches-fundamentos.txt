@@ -1,24 +1,77 @@
-Branch 
+Branch
+Em tradução literal, uma branch significa “ramo”. 
+No mundo da programação, ela tem o mesmo significado: uma branch é uma ramificação do seu projeto. 
+Os repositórios no GitHub funcionam como uma árvore.
 
-Os branches permitem que você desenvolva recursos, corrija erros ou experimente com segurança novas ideias em uma área contida do seu repositório.
-Você sempre cria um branch a partir de um branch existente. 
-Normalmente, você pode criar um novo branch a partir do branch-padrão do seu repositório. 
-Você então poderá trabalhar nesse novo branch isolado das mudanças que outras pessoas estão fazendo no repositório. 
-Um branch que você cria para produzir um recurso é comumente referido como um branch de recurso ou branch de tópico.
+As branches permitem que você desenvolva recursos, corrija erros ou experimente com segurança novas ideias em uma área contida do seu repositório.
+   
+    main                          merge       main
+   o--------o-----------------------o----------------------o 
+             \                     /   
+              \  branch           /
+               o-----------------o  
+         nova funcionalidade    
+
+Você sempre cria uma branch a partir de uma branch existente. 
+Normalmente, você pode criar uma nova branch a partir da branch-padrão do seu repositório. 
+Você então poderá trabalhar nessa nova branch isolada das mudanças que outras pessoas estão fazendo no repositório. 
+Uma branch que você cria para produzir um recurso é comumente referido como uma branch de recurso ou branch de tópico.
 
 Funcionalidade :
-Use um branch para isolar o trabalho de desenvolvimento sem afetar outros branches no repositório. 
-Cada repositório tem um branch padrão e pode ter vários outros branches. 
-Você pode fazer merge de um branch em outro branch usando uma pull request.
+Use uma branch para isolar o trabalho de desenvolvimento sem afetar outras branches no repositório. 
+Cada repositório tem uma branch padrão e pode ter várias outras branches. 
+Você pode fazer merge de uma branch em outra branch usando uma pull request.
 
-Sobre o branch-padrão :
-Ao criar um repositório com conteúdo em GitHub, GitHub cria o repositório com um único branch. 
-Este primeiro branch no repositório é o branch-padrão. 
-O branch-padrão é o branch que GitHub exibe quando alguém visita o seu repositório. 
-O branch padrão é também o branch inicial que o Git verifica localmente quando alguém clona o repositório. 
-A menos que você especifique um branch diferente, o branch-padrão em um repositório é o branch de base 
-para novos pull requests e commits de código.
-Por padrão, GitHub nomeia o branch padrão principal em qualquer novo repositório.
+Sobre a branch-padrão :
+Ao criar um repositório com conteúdo em GitHub, GitHub cria o repositório com uma única branch. 
+Esta primeira branch no repositório é a branch-padrão. 
+A branch-padrão é a branch que o GitHub exibe quando alguém visita o seu repositório. 
+A branch padrão é também a branch inicial que o Git verifica localmente quando alguém clona o repositório. 
+A menos que você especifique uma branch diferente, a branch-padrão em um repositório é a branch de base 
+para novos pulls, requests e commits de código.
+Por padrão, o GitHub nomeia a branch padrão principal em qualquer novo repositório.
 
+Uma nova política do Github passou a chamar a branch principal de "master" para "main".
+
+Movimentação da Head :
+git commit -m "c1"                 = cria o commit main c1
+git commit checkout -b nova-banch  = cria uma nova branch
+git checkout main                  = retorna o Head para a branch principal (main)
+git merge nova-branch              = une a nova-branch com a branch main e move o Head  
+
+
+Checkout e Merge :
+
+1. Clonando um diretório para testar alteração na branch main.
+git clone https://github.com/dagbertoRigue/diretorio-teste : clonando diretório para o desktop.
+cd diretorio-teste/ : acessando a pasta clonada.
+echo > arquivo1.txt : adicionando um arquivo na pasta.
+git status : resposta - nothing added to commit but intracked files present (use "git add" to track)
+git add * : muda para o estado de staged
+git commit -m "adiciona arquivo1 na branch main" : commitando o arquivo.
+git push origin main : empurrando o commit na branch local para a branch remota
+
+2. Testar alteração criando uma nova branch :
+Obs1: o comando git checkout é usado para se movimentar entre as branches e não para criar uma nova branch.
+Obs2: o comando git checkout -b é usado para criar uma nova branch e ao mesmo tempo se movimentar para ela.
+
+git checkout -b nova-funcionalidade : resposta - Switched to a new branch 'nova-funcionalidade'
+echo > arquivo2.txt : adicionando um arquivo na pasta.
+git checkout main : resposta - Switched to branch main - Nesse caso, o arquivo2 irá aparecer na branch main, poluindo a sua branch.
+git checkout nova-funcionalidade : voltando para nova branch
+git add * : adicionando o arquivo2 para a área de staged (também conhecida como index)
+git commit -m "Adiciona arquivo2 na branch nova"
+git push origin nova-funcionalidade : commitando na nova bifurcação (nova-funcionalidade) criada
+git checkout main : movendo para a branch main
+
+Obs3: o procedimento para unir as branches, com o comando merge, diz para primeiro se mover para a branch,
+      que deverá permanecer como a principal, no caso, a nossa branch main.
+
+git merge nova-funcionalidade : une a nova branch à branch principal.
+
+Obs4 :  resposta do merge - Your branch is ahead of 'origin/main' by 1 commit. (use "git push" to publish your local commits).
+        isso significa que a branch nova está à frente 1 commit e que é preciso fazer um push para atualizar as atualizações                 
+
+git push origin main
 
 

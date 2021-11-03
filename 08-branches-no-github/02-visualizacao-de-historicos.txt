@@ -1,1 +1,45 @@
 Visualização de Históricos
+
+Obs: usando git local
+
+1. Comando stash e seus subcomandos :
+
+Ver qual branch atual em que estamos : git branch
+Se mover para outra branch : git checkout nova-funcionalidade
+Renomear a branch (entrar na branch antes com checkout) : git branch -m novo-nome-da-branch
+Renomear uma branch estando em outras branch diferente : git branch -m nome-atual novo-nome-da-branch
+Deletando uma branch : git branch -d nome-da-branch
+Se mover para outra branch sem carregar arquivos do contexto da branch anterior 
+	(utilizando uma caixinha chamada stash) : git stash save "Inserir um contexto para facilitar a consulta posterior"
+Obs.: foi adicionado os arquivos para mudar o status para staged com "git add*".
+Verificar stashes salvos : git stash list
+Abrir a stash e trazer os arquivos de volta para a branch : git stash pop numero-do-stash-mostrado-no-stash-list
+Limpar a stash : git stash clear
+
+2. Comando log :
+
+Obs.: Clonar o diretório /docs do github para testar o comando log : git clone https://github.com/github/docs
+Visualizar histórico : git log
+Sair da visualização : :q
+Visualizar o histórico de apenas um diretório : git log nome-do-diretório
+Visualizar o histórico de apenas um arquivo : git log nome-do-arquivo
+
+3. Subcomandos específicos com git log :
+
+Histórico de uma linha (resumo) : git log --oneline
+Histórico de forma mais ilustrada, de forma gráfica : git log --graph
+
+Abrir programa gráfico que mostra informações como apresentadas no --graph : gitk
+
+
+
+
+
+
+
+
+
+
+
+
+

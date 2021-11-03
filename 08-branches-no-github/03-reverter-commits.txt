@@ -1,1 +1,30 @@
 Reverter Commits
+
+Atenção : reverter commit pode destruir código.
+Obs1 : a reversão dos commits acontecem antes de enviar para o repositório remoto
+Obs2 : recomenda-se utilizar o VS Code.
+
+Git Reset :
+Reset orientado ao hash : git reset hash-de-um-commit
+Reset orientado a Head (o número após o til '~' indica quantos commits serão resetados pra trás do Head atual : git reset HEAD~1
+Reset com comando inverso do "git add" (O HEAD~1 é opcional) : git reset --soft HEAD~1
+Reset default (volta os arquivos para os statuses anteriores) : git reset --mixed
+Reset que destrói código (elimina os commits completamente) : git reset --hard HEAD~1
+
+Git Revert :
+git revert não manipula diretamente os estados dos arquivos.
+Ele manipula os apontamentos dos commits.
+Não trabalha com as flags soft, mixed, nem hard.
+
+
+
+
+
+
+
+
+
+
+
+
+

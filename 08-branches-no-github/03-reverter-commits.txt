@@ -17,4 +17,7 @@ Ele manipula os apontamentos dos commits.
 Não trabalha com as flags soft, mixed, nem hard.
 Como ele reverte a operação, no caso de um commit que adiciona um arquivo, o reverte deleta esse arquivo.
 
-modelo : git revert hash-do-arquivo
+modelo1 : git revert hash-do-arquivo
+modelo2 : git revert ~HEADx
+
+onde x é o intervalo, a partir do último commit que será revertido.

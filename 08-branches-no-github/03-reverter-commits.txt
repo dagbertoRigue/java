@@ -18,16 +18,3 @@ Não trabalha com as flags soft, mixed, nem hard.
 Como ele reverte a operação, no caso de um commit que adiciona um arquivo, o reverte deleta esse arquivo.
 
 modelo : git revert hash-do-arquivo
-
-
-
-
-
-
-
-
-
-
-
-
-

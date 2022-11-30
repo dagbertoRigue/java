@@ -1,0 +1,45 @@
+Instalações 
+================================================================================================================
+1º. Instalando Java JDK :
+1. Baixe a Free build de OpenJDK - https://www.azul.com/downloads/zulu-community/
+Lembre-se de baixar a última versão LTS. (A atual em 2021 é Java 11)
+Escolha a versão do sistema operacional e baixe a opção .zip porque é mais fácil de instalar.
+
+2. Após baixar o JDK, vá até a pastas C:/Arquivos de programas, crie uma pasta com nome de Java.
+Cole a pasta descompactada que acabou de baixar nesse diretório criado.
+
+3. Crie a variável de sistema para o Java
+Digite "var" no iniciar - vai aparecer a opção "Editar as variáveis de ambiente do sistema".
+Na aba "Avançado", entre em Variáveis de Ambiente - e na janela, Variáveis do sistema.
+Clique em novo.
+Nome da variável = JAVA_HOME
+Valor da variável = C:\Program Files\Java\zulu11.48.21-ca-jdk11.0.11-win_x64
+Copie o endereço do diretório salvo em arquivos de programas, como no exemplo acima.
+
+4. Edite a variável de sistema Path.
+Selecione a variável "Path", clique em editar, na janela, clique em novo e adicione o mesmo endereço da pasta.
+Macete : selecione após adicionar e mova-o para cima, deixando-o por primeiro.
+Isso evita problema de compatibilidade com outra versão pré existente.
+Dê OK nas janelas para confirmar tudo.
+
+5. Conferir.
+abra o CMD e digite : java -version
+Deve aparecer a versão do java e do JDK, assim :
+
+C:\Users\Rigue>java -version
+openjdk version "11.0.11" 2021-04-20 LTS
+OpenJDK Runtime Environment Zulu11.48+21-CA (build 11.0.11+9-LTS)
+OpenJDK 64-Bit Server VM Zulu11.48+21-CA (build 11.0.11+9-LTS, mixed mode)
+
+================================================================================================================
+
+2º Instalando o Eclipse
+1. Acessar http://www.eclipse.org/downloads
+Baixe a última versão do Eclipse IDE for Enterprise Java and Web Developers
+2. Salve a pasta descompactada em c:/Arquivos de Programas
+3. Entre na pasta e duplo clique em eclipse.exe
+4. Escolha o workspace, onde deverá ser armazenado os desenvolvimentos, durante a instalação
+
+Pronto!
+
+

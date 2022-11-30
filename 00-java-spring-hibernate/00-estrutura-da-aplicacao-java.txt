@@ -1,0 +1,16 @@
+Estrutura da aplicação Java
+
+Java é uma linguagem orientada a objetos e a unidade lógica básica (o objeto) de uma aplicação em Java é a classe.
+Todo o código em Java deve estar dentro de classes.
+
+Package é um agrupamento lógico de classes relacionadas, por exemplo :
+Package Entities (entidades do negócio) - classe cliente, classe produto, classe pedido, ...
+Package Services - classe emails, classe logs, ...
+
+Módulo é um agrupamento lógico de pacotes relacionados, por exemplo :
+Módulo Financial - package entities, package services, ...
+
+Agrupamento lógico podem ser compilados para gerar o Build = Runtime
+Runtime - agrupamento físico
+
+Aplicação é um agrupamento de módulos.

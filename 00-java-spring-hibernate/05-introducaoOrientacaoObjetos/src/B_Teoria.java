@@ -1,0 +1,62 @@
+
+public class B_Teoria {
+
+	public static void main(String[] args) {
+		/*
+		 *
+			Triângulo é uma entidade com três atributos: a, b, c.
+			Estamos usando três variáveis distintas para representar cada triângulo:
+			double aX, bX, cX, aY, bY, cY;
+			
+			Memória:
+			aX = 3.00     aY = 7.50
+			bX = 4.00     bY = 4.50
+			cX = 5.00     cY = 4.02
+			
+			Para melhorar isso, vamos usar uma CLASSE para representar um triângulo.
+			
+			package entities;
+			public class Triangle {
+			     public double a;
+			     public double b;
+			     public double c;
+			}
+			
+			Triangle x, y;
+			x = new Triangle();
+			y = new Triangle();
+			
+			Dessa forma, x e y vão alocar os dados nas variáveis a, b, c, sendo necessário apenas essas três.
+			
+			Depois, vamos criar a classe principal no package "application" para chamar a classe Triangle.
+			
+			
+			Teoria :
+			
+			Classe : é um tipo estruturado que pode conter membros (atributos e métodos) :
+			Atributos (dados / campos)
+			Métodos (funções / operações)
+			
+			A classe também pode prover muitos outros recursos, tais como:
+			Construtores
+			Sobrecarga
+			Encapsulamento
+			Herança
+			Polimorfismo
+			
+			Exemplos:
+			Entidades: Produto, Cliente, Triangulo
+			Serviços: ProdutoService, ClienteService, EmailService, StorageService
+			Controladores: ProdutoController, ClienteController
+			Utilitários: Calculadora, Compactador
+			Outros (views, repositórios, gerenciadores, etc.) 
+			
+			IMPORTANTE : 
+			CLASSE = a definição do tipo               (classe Triangulo)
+			INSTÂNCIA = alocação dinâmica de memória   (x = new Triangle)
+			OBJETO = são instâncias da classe          (Triângulo X)
+		 **/
+
+	}
+
+}

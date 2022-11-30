@@ -1,0 +1,65 @@
+Memória :
+A memória é dividida em área Stack e Heap
+Stack - aloca o endereço de memória, onde o objeto é alocado.
+Heap - responsável pela alocação dinâmica de memória, onde é alocado os objetos utilizados durante o tempo de execução.
+
+TIPO REFERÊNCIA X TIPO VALOR
+Classes são tipos referência:
+Variáveis, cujo tipo são classes, devem ser entendidas como ponteiros.
+Product p1, p2;                                ________________________________________________
+p1 = new Product("TV", 900.00, 0);            |                   Memória                      |
+                                              | --------------------- ------------------------ |
+                                              | |       Stack       | |         Heap          ||
+                                              | |                   | |                       ||
+                                              | |      _p1_______   | |                       ||
+                                              | |     |          |  | |     _0x100358________ ||
+                                              | |     | 0x100358 | ______> | TV | 900.00 | 0 |||
+                                              | |     |__________|  | |    |____|________|___|||
+                                              | |                   | |                       ||
+                                              | --------------------- -------------------------|
+                                              |________________________________________________| 
+                                                  
+
+No caso de p2 = p1, p2 passa a apontar para onde p1 aponta.
+Nota : Tipos referência aceitam o valor "null", que indica que a variável aponta pra ninguém.
+
+Tipos primitivos (byte, short, int, long, float, double, boolean, char, ...) são tipos valor : 
+Variáveis, cujo tipo são valor são armazenadas no Stack, como caixas e não como ponteiros.
+
+Valores padrão :
+Quando alocamos (new) qualquer tipo estruturado (classe ou array), são atribuídos valores padrão aos seus elementos.
+• números: 0
+• boolean: false
+• char: caractere código 0
+• objeto: null
+
+Resumo dos tipos referência X tipos valor :
+ __________________________________________________________________________________________________________________
+|                CLASSE                          |                TIPO PRIMITIVO                                   |  
+|________________________________________________|_________________________________________________________________|
+| Vantagem: usufrui de todos recursos OO         | Vantagem: é mais simples e mais performático                    |
+|________________________________________________|_________________________________________________________________|
+| Variáveis são ponteiros                        | Variáveis são caixas                                            |
+|________________________________________________|_________________________________________________________________|
+| Objetos precisam ser instanciados usando new,  | Não instancia. Uma vez declarados, estão prontos para uso.      |
+|  ou apontar para um objeto já existente.       |                                                                 |
+|________________________________________________|_________________________________________________________________|
+| Aceita valor null                              | Não aceita valor null                                           |
+|________________________________________________|_________________________________________________________________|
+| Y = X;                                         | Y = X;                                                          |  
+| "Y passa a apontar para onde X aponta"         | "Y recebe uma cópia de X"                                       | 
+|________________________________________________|_________________________________________________________________|
+| Objetos instanciados no heap                   | "Objetos" instanciados no stack                                 | 
+|________________________________________________|_________________________________________________________________|
+| Objetos não utilizados são desalocados em um   | "Objetos" são desalocados imediatamente quando                  |
+|  momento próximo pelo garbage collector        |   seu escopo de execução é finalizado                           | 
+|________________________________________________|_________________________________________________________________|
+
+
+Garbage collector
+É um processo que automatiza o gerenciamento de memória de um programa em execução
+O garbage collector monitora os objetos alocados dinamicamente pelo programa (no heap), 
+desalocando aqueles que não estão mais sendo utilizados.
+
+Objetos alocados dinamicamente, quando não possuem mais referência para eles, serão desalocados pelo garbage collector.
+Variáveis locais são desalocadas imediatamente assim que seu escopo local sai de execução.

@@ -1,2 +1,2 @@
-# java-and-angular-capgemini-fullstack
-Repositório para desenvolvimentos em Java
+# java
+Repositório de recursos para desenvolvimentos em Java
